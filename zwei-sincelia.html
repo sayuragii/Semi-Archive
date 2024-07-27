@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang=en><head><title>[rp] 🥒 キュー - your-shield</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/1093324008059052187/1fc2ced94492a047ff281d6529041ece.png?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>[rp] 🥒 キュー</div><div class=preamble__entry>completed RP! / your-shield</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1194188682056437841 class=chatlog__message-container data-message-id=1194188682056437841><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 2:59 AM"><a href=#chatlog__message-container-1194188682056437841>1/9/2024 2:59 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">&quot;Erm. This is Sinclair. Yeah, I&#39;ve made contact with our client. Not directly of course, but I&#39;m around...&quot;</code>
+
+The boyish young man babbled into his walkie-talkie, providing a long winded explanation to describe the fact he was in roughly the same area as his client but that they hopefully had not realized his presence yet.
+
+He shuffled through his coat pocket, producing a small notepad carrying mission details. He had read it at least a dozen times, and read it once more.
+
+<em>Hired by a Gino... Client&#39;s name is Alice. A small girl... a bit shorter than me. Mission is meant to be covert...</em>
+
+Sinclair dreaded covert missions above all, having to wear stuffy clothes over the already bulky jackets. He stood by leaning against a nearby lamp post, pretending to stare at a street sign and not his client.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194191875213623387 class=chatlog__message-container data-message-id=1194191875213623387><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 3:12 AM"><a href=#chatlog__message-container-1194191875213623387>1/9/2024 3:12 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“…”
+
+Boring rainy day, even more boring walks home. 
+
+Well, not this time. Finally, the road home was paved with a small market event — Alice carried a white and pale blue umbrella under the light drizzle, staring at handmade clothes and purses stacked in a haphazard display underneath a tent. 
+
+<em>Am I really interested in these…? Mmm, Gino told me not to spend too much, and I need to save before my next recital.</em> 
+
+Anxious hands tightened around a bookbag’s handle. Thoughtful eyes scanned items, imagining them as new pieces in the limited wardrobe of a conscious young woman. 
+
+She remained unaware of the pairs of eyes that watched her every move. That scanned her whereabouts, ensuring every step was safe while she engaged in a normal afternoon market promenade.
+
+At least, it was what was required of one section to ensure the backend of the client’s <em>true</em> request wasn’t compromised.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194362255261847672 class=chatlog__message-container data-message-id=1194362255261847672><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 2:29 PM"><a href=#chatlog__message-container-1194362255261847672>1/9/2024 2:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Attempting to avoid looking too conspicuous seemed to be an entire trial within itself. Trying not to linger in one place for too long, but still remaining in the relative area.
+
+He pretended to window shop, sit on a park bench, or watching pigeons walk about. Every so often he would steal a glance to make sure his client was still in the area.
+
+<em>I was provided an estimated outline of what she would be doing today… but sometimes clients will veer from it. Please don’t make this difficult for me…</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194367184567287909 class=chatlog__message-container data-message-id=1194367184567287909><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 2:48 PM"><a href=#chatlog__message-container-1194367184567287909>1/9/2024 2:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>For now, her path wouldn’t stray. The directions given were rather thorough. <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">She tends to browse the market for 30 to 45 minutes, never buying more than a few items. Afterwards, she stops for a small meal before dinner, then walks back home, only stopping if seeing an animal on the way.</code>
+
+It was odd to receive such specific information, but it seemed like Alice had a lot of eyes on her protecting her from something she wasn’t even aware of.
+
+The Zwei just so happened to be part of the process now. 
+
+She soon stopped in front of a small musical stand. Alice squatted down in front of an ornate wooden metronome, soon looking around anxiously to see if there was anyone watching her. 
+
+She wasn’t aware there was, so to her the coast was clear.
+
+Gentle hands picked it up. She stood tall again, scanning its features and soon turning it on 
+
+<em>…I have enough at home, but this one is newer. I—is someone staring at me? I can’t look weird being so interested in this…</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194392124863553699 class=chatlog__message-container data-message-id=1194392124863553699><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 4:27 PM"><a href=#chatlog__message-container-1194392124863553699>1/9/2024 4:27 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>His gloved hands held each other while he stared at sparrows and other small birds hop around. 
+
+<em>Hm. Should I buy them some bread? They might be hungry... mm. There&#39;s no time to be getting distracted. I&#39;ve been put on a solo mission today for a reason. I&#39;m sure it means the higher ups trust me to be competent. I need to focus.</em>
+
+He watch her ash colored hair dip down and stand back up straight. 
+
+<em>I was told she might buy something. Is that a risk? Would she be more likely to be attacked if she was holding something someone might perceive as valuable? I-I shouldn&#39;t get involved though...</em> 
+
+He held his communicator up to his mouth briefly, whispering softly into it.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Client... is shopping.</code>
+
+He was unsure if he <em>had</em> to report everything, but he figured an occasional update was best to keep those in charge happy.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194397892018966678 class=chatlog__message-container data-message-id=1194397892018966678><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 4:50 PM"><a href=#chatlog__message-container-1194397892018966678>1/9/2024 4:50 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a few moments of pondering, the shopkeeper took note of Alice’s interest in the metronome.
+
+“Something pique your interest, miss?”
+“Oh, um.”
+
+Her head ducked down. She stared at the small golden needle rocking side to side, ticking rhythmically and matching her heartbeat.
+
+“…just this metronome.”
+“Well, let me tell you- unless you have a great deal of money, you might want to look elsewhere. It used to belong to one of the greatest pianists in this town, so it’s worth a pretty penny.”
+
+Alice’s face turned to a slight frown. Something in her wanted it — so, she quietly asked. “…how did you get it?”
+
+“…eh? Ah, some mister named Gino sold it to us.”
+“Gi…no.”
+
+Her face lit up.
+
+“Oh, Gino’s my friend! Are you saying this was his? then, why… would he…?”
+
+She tilted her head. “Is there some way i could put a hold on this until I get the money?”
+
+The shopkeeper seemed confused, and nearly upset at the request. “I don’t… see why not, but, are y—“
+
+“It’s fine. I can return the next day with the money, just tell me the amount.” 
+
+And so, a fierce negotiation began as the shopkeeper was reluctant to let go of such a valuable item, but Alice’s instinct made her desire it more.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194479424419143720 class=chatlog__message-container data-message-id=1194479424419143720><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:14 PM"><a href=#chatlog__message-container-1194479424419143720>1/9/2024 10:14 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sinclair watched the bartering as it happened from a distance. He could see lips move and hand motions being made, but not sure what any of it meant. 
+
+<em>D-does this count as a conflict? Should I get involved?</em>
+
+He felt his side briefly, feeling the extendable baton that was stowed away with the rest of the gear just beneath his outfit.
+
+<em>Only for emergencies...</em>
+
+He got up from the bench and pretended to contemplate a stall nearby, now in range to be able to hear whatever conversation she might be having with seller.
+
+<em>If things get heated, I&#39;ll step in.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194481345934659716 class=chatlog__message-container data-message-id=1194481345934659716><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:22 PM"><a href=#chatlog__message-container-1194481345934659716>1/9/2024 10:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>She kept the metronome tight in her hands as it felt like more eyes other than the shopkeeper&#39;s were on her. Alice spoke quietly, simply just wanting to take such a beautiful item for herself -- and, if it was true that the item was Gino&#39;s, maybe she was meant to have it anyways. 
+
+<em>I&#39;ll question him when I have it...</em>
+
+&quot;I-I&#39;m sorry, is it on reserve?&quot;
+&quot;Not exactly, miss. It&#39;s just a really special item, so many eyes are on it, right?&quot;
+&quot;Right. Uhm, but that means--&quot;
+&quot;Just put it down-- here, there&#39;s another metronome just as beautiful!&quot;
+
+As Alice&#39;s attention was brought over to the other wares, she hesitantly placed the item in her hands down before something shiny flew right above her wrists --
+
+Fortunately, it only gently nicked the sleeves of her blouse, leaving the smallest scrape upon one of her wrists. 
+
+The metronome, however, was dropped, the gold-tinted glass shattering upon impact with the ground. Alice stood there, in shock.
+
+&quot;Ah--&quot;
+&quot;Huh?&quot;
+&quot;...?&quot;
+&quot;Ah--uh-- maybe that warning should&#39;ve been listened to.&quot;
+&quot;I... I&#39;m sorry!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194484147058638858 class=chatlog__message-container data-message-id=1194484147058638858><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:33 PM"><a href=#chatlog__message-container-1194484147058638858>1/9/2024 10:33 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sinclair saw something narrowly whiz past. He wasn&#39;t sure what it was, but the shine of it and the injury it left on her narrowed it down to something sharp.
+
+<em>N-Now? Here? In public? Not in a tucked away alley?</em>
+
+He wasn&#39;t anticipating action so soon, but it was fine. 
+
+<em>I-If I can get her away from here for now. I can explain later.</em>
+
+Sinclair moved to the stall with urgency.
+
+&quot;Oh dear... M-most things in the market probably operate on a &#39;you break it, you buy it&#39; ruleset? I-if I could be so forward... I&#39;d like to pay for it.&quot;
+
+<em>I&#39;ll write it off as a mission expense...</em>
+
+Sinclair pulled out few bills from his pocket, and placed it on the counter of the stall. Immediately afterwards, he turned to Alice.
+
+&quot;E-excuse me Miss. If you don&#39;t mind there&#39;s a small matter I need to discuss with you. It&#39;s about uh... Modelling! Yes! Modelling! I&#39;m with a certain modelling firm, and you look perfect for our new line. How about we go somewhere else?&quot;
+
+<em>Just get her out of the danger zone for now...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194485573285593220 class=chatlog__message-container data-message-id=1194485573285593220><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:39 PM"><a href=#chatlog__message-container-1194485573285593220>1/9/2024 10:39 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Alice remained frozen still, but as she heard another voice, her head quickly shot to it. In front of her was someone likely around her age, suddenly blurting out that they needed to speak to her.
+
+&quot;I, uh--&quot;
+
+The shopkeeper sputtered. &quot;A--Are you sure? That thing&#39;s almost a quarter of a million won for repairing it too, sir, that&#39;s no easy price, and no offense, but you--&quot;
+
+&quot;It&#39;s okay, if he can buy it, that&#39;s fine.&quot; Alice reassured. &quot;I wouldn&#39;t be able to muster up the money quick enough--&quot;
+
+Her train of thought stopped as Sinclair&#39;s attention became directed towards her.
+
+<em>Modeling? What? I&#39;m...</em>
+
+She stared on, heterochromatic eyes wide and full of her lingering fear. 
+
+Alice&#39;s meek voice spoke softly.
+
+&quot;I, ah? uhm... I... mhm, okay.&quot;</span> <span class=chatlog__edited-timestamp title="Tuesday, January 9, 2024 10:39 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194486888543830066 class=chatlog__message-container data-message-id=1194486888543830066><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:44 PM"><a href=#chatlog__message-container-1194486888543830066>1/9/2024 10:44 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;N-no worry! I-If that money isn&#39;t enough please contact my associates...&quot;
+
+<em>P-Please don&#39;t be mad Miss Faust...</em>
+
+He pulled out a small business card, flipping it facedown to hide the Zwei Association logo on it. 
+
+&quot;C-come along then! No time to waste Miss!&quot; 
+
+He smiled awkwardly at her, before walking down the wide streets.
+
+<em>Should I take her to a cafe? Would it keep us out of trouble? I mean... it&#39;s not like I can take her to a low population density area to discuss modelling. That would only scare her... I-I really don&#39;t know a thing about modelling...</em>
+
+&quot;A-are you hungry? I know a place we can stop for a treat while we talk.&quot;</span> <span class=chatlog__edited-timestamp title="Tuesday, January 9, 2024 10:49 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194489785033695232 class=chatlog__message-container data-message-id=1194489785033695232><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 10:55 PM"><a href=#chatlog__message-container-1194489785033695232>1/9/2024 10:55 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Ah? I-- I usually stop for food after, so that&#39;s fine. There&#39;s... a small delicatessen up the street that I usually frequent, since it shares its space with a cafe.&quot;
+
+Even with how much of Alice was meek and seemingly unknowing, she found a hint of suspicion in how close it was that she was essentially &#39;head-hunted&#39; twice. However, the young woman kept quiet about it.
+
+Her body language gave away that she was still shaken up. Her hands were holding the handle of her bag tightly, knuckles nearly white from the grip. Alice&#39;s eyes remained widened too, although her gaze was focused on Sinclair. 
+
+She examined his features, just in case he too ended up being an unsavory guest.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194490979156246529 class=chatlog__message-container data-message-id=1194490979156246529><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:00 PM"><a href=#chatlog__message-container-1194490979156246529>1/9/2024 11:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Perfect! That&#39;s a good spot. No problem.&quot;
+
+Sinclair did his best to walk in a fashion that would allow him to intercept anything that might be thrown her way. The work he had done with the Zwei association had marginally improved his physical capabilities. Even if he appeared rather small in build, he was definitely much more able than he used to be.
+
+&quot;So, uh. Lets get pleasantries done. I-I apologize for not introducing myself earlier. My name is Emil Sinclair. Just Sinclair is fine. And you are...?&quot;
+
+<em>I guess it happens we&#39;re going the same place I planned to go anyway. Funny how that works out...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194492516167327775 class=chatlog__message-container data-message-id=1194492516167327775><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:06 PM"><a href=#chatlog__message-container-1194492516167327775>1/9/2024 11:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Ah. It&#39;s okay.&quot;
+
+Alice nodded, pulling a piece of her hair behind her ear. Her words came out quietly and slowly, as if a lot of deliberate thought were put behind them.
+
+&quot;I&#39;m. . . Alice.&quot;
+
+She extended a small, slender hand for him to shake.
+
+&quot;Nice to meet you.&quot;
+
+She avoided eye contact with him, head turned slightly to the side as she stared at the ground.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194495375248216144 class=chatlog__message-container data-message-id=1194495375248216144><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:18 PM"><a href=#chatlog__message-container-1194495375248216144>1/9/2024 11:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Nice to meet you too Alice.&quot;
+
+He extended a gloved hand to give her a brief shake. He didn&#39;t want to be rude, but stopping to give a proper handshake would make her a target.
+
+&quot;It&#39;s a pleasure. I-I wouldn&#39;t want our potential talent to be tired before we got a chance to properly discuss business though, so lets hurry along to our stop.&quot;
+
+He did his best to stay cool, although the warm smile betrayed his actual emotions, which were of concern and panic. He suddenly found himself wishing Don Quixote was by his side for this task.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194496664615002202 class=chatlog__message-container data-message-id=1194496664615002202><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:23 PM"><a href=#chatlog__message-container-1194496664615002202>1/9/2024 11:23 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Mm. Right.&quot;
+
+With the shake, she nodded and held her bag with both of her hands as she soon walked ahead to lead Sinclair to the cafe.
+
+Although she wasn&#39;t quite properly carrying her afternoon routine, Alice at least was thankful she was able to complete each step. She still felt bad about the metronome, wanting to ask about it and buy it.
+
+<em>It was so beautiful... maybe Gino can take it back? I wonder why he sold it.&quot;</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194502929621725285 class=chatlog__message-container data-message-id=1194502929621725285><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:48 PM"><a href=#chatlog__message-container-1194502929621725285>1/9/2024 11:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sinclair was glad she was taking the lead, as he could easily jump in front of her to protect her from forward attacks, and still easily guard her blind spot. He had visited the caf&#233; they were heading towards a few times before, but had never step foot into the delicatessen.
+
+<em>I guess this&#39;ll be a new experience?</em>
+
+He briefly examined the notepad that contained her schedule. 
+
+<em>Hm. Small meal? I suppose I ought to treat her to it then, on the guise of being from an agency...</em></span> <span class=chatlog__edited-timestamp title="Tuesday, January 9, 2024 11:56 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194505051012612207 class=chatlog__message-container data-message-id=1194505051012612207><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 9, 2024 11:56 PM"><a href=#chatlog__message-container-1194505051012612207>1/9/2024 11:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Alice eventually found the place, entering through the deli&#39;s side. The butcher seemed to light up at seeing the girl, waving with one hand while the other portioned some meat.
+
+&quot;Little miss Ivory tickler! Come for your afternoon meal?&quot;
+&quot;Ah, uhm-- Hilda! yeah, I&#39;m just early because of--erm-- business...?&quot;
+&quot;No worries. The others will be happy to see ya. Tell Gino I said hi, okay?&quot;
+&quot;Mmm.&quot;
+
+Alice turned to Sinclair, giving a little nod and a shrug. &quot;I come here often enough that they really like me here. Uhm... just give me a moment to fill out an order on this side before we can cross-over.&quot;
+
+Right as she did that, she took a small slip of paper before grabbing a small pen from her bag to write. After a moment, the slip was handed across the counter.
+
+&quot;...Okay, we can go.&quot;</span> <span class=chatlog__edited-timestamp title="Tuesday, January 9, 2024 11:57 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194508615936114778 class=chatlog__message-container data-message-id=1194508615936114778><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:10 AM"><a href=#chatlog__message-container-1194508615936114778>1/10/2024 12:10 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Alright.&quot;
+
+<em>Ivory tickler? That&#39;s a funny nickname. I&#39;ll ask her later.</em>
+
+He scanned his eyes over the various portions of meat racking the deli, before entering the cafe alongside her.
+
+The caf&#233; was fairly modest in size, but from the times Sinclair had visited he was well aware that despite it being small it was a wonderful establishment. After work treats always seemed to taste best here. 
+
+&quot;Lets sit here...&quot;
+
+He directed her to a table at the corner of the dining area, hopefully keeping her far away from anyone that would do harm.
+
+&quot;Business should be private, obviously...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194509603615019018 class=chatlog__message-container data-message-id=1194509603615019018><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:14 AM"><a href=#chatlog__message-container-1194509603615019018>1/10/2024 12:14 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Once again, Alice was then recognized by the young woman who ran the cafe. She took a moment to wave briefly, exchanging greetings before quickly moving to sit at the table Sinclair guided her to.
+
+&quot;Afternoon, Baby Grand!&quot;
+&quot;A--Afternoon, miss Lisa..!&quot;
+
+<em>Gah... it&#39;s embarrassing to be called childhood nicknames in front of someone who could be hiring me --</em>
+
+<em>D...Do I even want this job?</em>
+
+Either way, it was too late to back out of at least hearing his pitch. Alice dusted off the seat just before sitting down. Her shoulders got stiff, and she seemed to be trying her hardest to hide her presence.
+
+&quot;Ah, uhm. okay.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194510897394233354 class=chatlog__message-container data-message-id=1194510897394233354><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:19 AM"><a href=#chatlog__message-container-1194510897394233354>1/10/2024 12:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sinclair couldn&#39;t help but giggle a little. 
+
+&quot;I-It looks like you&#39;re rather well known in this area. Before we start getting into the uh... more boring stuff, it&#39;d be rude for me to not treat you first. D-don&#39;t worry, the company will cover it.&quot;
+
+Sinclair could practically feel Faust staring at him with her cold gaze for using office funds excessively, but he had to try and save face.
+
+&quot;I already know what I&#39;d want to order anyways... so just pick what you like!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194513651328102471 class=chatlog__message-container data-message-id=1194513651328102471><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:30 AM"><a href=#chatlog__message-container-1194513651328102471>1/10/2024 12:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Ah-- okay, uhm...&quot;
+
+Alice suddenly forgot her usual order. She took a few moments to remember, then blinked.
+
+&quot;Oh, right. I usually get strawberry scones, their homestyle club, and ahhmm.... oh, their caramel cream latte.&quot; 
+
+Saying it out loud made her feel sheepish. It was such a sweet meal, if she were to become a model wouldn&#39;t she need to cut down on her sweets?
+
+<em>W--Wait, why am I even considering this?</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194517541146611742 class=chatlog__message-container data-message-id=1194517541146611742><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:46 AM"><a href=#chatlog__message-container-1194517541146611742>1/10/2024 12:46 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;That all sounds wonderful. I&#39;m a fan of the sweets here too... everything in moderation though. I need to be in good shape for my job.&quot;
+
+It wasn&#39;t a lie that the Zwei Association demanded a physically healthy body to ensure the protection of their clientele.
+
+&quot;Although, I&#39;m not looking to eat a full meal as much as I just want something sweet.&quot;
+
+Sinclair flagged down a server, whom flipped open a notepad as he approached the table. 
+
+&quot;Good afternoon, what can I get you two?&quot;
+
+&quot;I&#39;ll have a chocolate mousse and a small coffee with milk and sugar.&quot;
+
+&quot;Of course, and for the lady?&quot;
+
+Sinclair turned towards Alice briefly. &quot;Go on, whatever you want. I promise it&#39;s A-Okay.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194518635465691208 class=chatlog__message-container data-message-id=1194518635465691208><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:50 AM"><a href=#chatlog__message-container-1194518635465691208>1/10/2024 12:50 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Quietly, she repeated her order, who seemed to note it before she could even finish.
+
+&quot;Ah, right. That shouldn&#39;t take long.&quot;
+
+Alice soon ducked her head into her hands in embarrassment. Briefly, however, she gave a thumbs up to the server, feeling her cheeks get warm.
+
+<em>Ahh... I&#39;m a regular here, of course they know what I want... this is so embarrassing.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194520590950866945 class=chatlog__message-container data-message-id=1194520590950866945><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:58 AM"><a href=#chatlog__message-container-1194520590950866945>1/10/2024 12:58 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>He smiled to her reassuringly. 
+
+<em>S-she is kind of cute though... I feel bad for lying to her. It&#39;s for the best though.</em>
+
+&quot;T-tell me about yourself, if you don&#39;t mind Alice? Just simple stuff is fine. Background information means everything in my line of work. You need to really know your stuff to make sure things go smoothly.&quot; 
+
+He held his breath for a moment. &quot;Modelling is a rather cutthroat business after all.&quot;
+
+<em>More literally than figuratively given the situation...</em></span> <span class=chatlog__edited-timestamp title="Wednesday, January 10, 2024 12:59 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194522187814678569 class=chatlog__message-container data-message-id=1194522187814678569><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 1:04 AM"><a href=#chatlog__message-container-1194522187814678569>1/10/2024 1:04 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>When Sinclair spoke, she took her head out of her hands, then straightened her appearance.
+
+&quot;O-Oh, okay. Uhm..&quot;
+
+Truthfully, she did not know or remember too much about her background, but she was able to muster up just enough to not seem fully dull.
+
+&quot;I&#39;m currently a student at the music school on the other side of town -- uhm... I&#39;ve won some awards for my recitals, but I also have some awards for my writing.&quot;
+
+Alice blanked out for a moment, her gaze seemingly drifting away. Quietly, she gathered her thoughts.
+
+&quot;...&quot;
+
+A few questions would better guide her line of thinking. As of now, she was just shyly looking on, a half-smile on her face.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194523727665307708 class=chatlog__message-container data-message-id=1194523727665307708><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 1:10 AM"><a href=#chatlog__message-container-1194523727665307708>1/10/2024 1:10 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Oh? That&#39;s impressive! I-I used to play the piano. I&#39;m definitely out of practice now... b-but I can respect anyone that commits themselves to music. Writing as well! Those are both super competitive fields! That&#39;s amazing!&quot;
+
+He eventually realized he was rambling, clearing his throat and returning to a more professional attitude.
+
+&quot;Mhm. So this is good though, an award winner. Not just anyone gets to be a model, so having something that makes you stand out is great. Pretty faces are a dime a dozen, but talent isn&#39;t as common.&quot;
+
+<em>D-did I call her pretty? Aah... embarassing... w-well in this case it&#39;s appropriate, right? S-she is pretty after all... and models should be pretty.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194524463539163156 class=chatlog__message-container data-message-id=1194524463539163156><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 1:13 AM"><a href=#chatlog__message-container-1194524463539163156>1/10/2024 1:13 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Ah? o-oh, thank you..&quot;
+
+She got sheepish again, hiding her face with her hands as a light pink blush took over her face. Alice couldn&#39;t help but feel nervous at the interaction, being suddenly noticed and praised for her accomplishments was an unfamiliar feeling.
+
+<em>...Ah, but you have to decline, right? You can&#39;t study and be a model at once, I think.</em>
+
+<em>Mmm... I&#39;d be killed if I took this without talking through it...!</em>
+
+<em>But, it&#39;s odd that ... this recruiter is so willing.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194526029646143538 class=chatlog__message-container data-message-id=1194526029646143538><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 1:19 AM"><a href=#chatlog__message-container-1194526029646143538>1/10/2024 1:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Before he could dig himself into this lie any further, they were interrupted by their server dropping off their dishes. Drinks and plates came out in front of the ones who ordered them, before the waiter merely smiled and nudged Sinclair.
+
+&quot;Go easy on the poor girl, Sonny. The last thing you want is your woman to melt in her seat.&quot;
+
+Before Sinclair could object or explain the misunderstanding, that he was merely scouting for a model and not on a date, the server was already gone. 
+
+He mumbled to Alice, abashed and face as red as the table cloth.
+
+&quot;F-feel free to dig in... B-bon Appetit or what not...&quot;</span> <span class=chatlog__edited-timestamp title="Wednesday, January 10, 2024 1:20 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194529827940749343 class=chatlog__message-container data-message-id=1194529827940749343><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 1:35 AM"><a href=#chatlog__message-container-1194529827940749343>1/10/2024 1:35 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The comment made her blush a little more, but seeing her food in front of her seemed to make her calm down ever so slightly. 
+
+&quot;Mm-- ok.&quot; 
+
+Alice quietly picked up the sandwich, eating it rather daintily -- as if she were a bit too nervous to dig in, or just someone who did not eat very greedily regardless.
+
+<em>Bah-- I guess we could get mistaken for a couple... I wonder how he got this job instead of studying still... Would that be rude to ask?</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194680591564673134 class=chatlog__message-container data-message-id=1194680591564673134><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 11:34 AM"><a href=#chatlog__message-container-1194680591564673134>1/10/2024 11:34 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sinclair gently scooped up mousse with his spoon. He felt on edge for a thousand different reasons right now, so he was hoping the sweet tastes would help him relax.
+
+<em>Why am I getting so embarassed... It&#39;s not like I know her or anything, I&#39;m just the one that was chosen for this job. But she is cute... maybe...</em>
+
+<em>No! No! Don&#39;t think about getting a crush you dummy! Bl&#246;dmann...</em>
+
+&quot;I hope the... food is to your taste.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194681852435365948 class=chatlog__message-container data-message-id=1194681852435365948><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 11:39 AM"><a href=#chatlog__message-container-1194681852435365948>1/10/2024 11:39 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After taking a bite, she put the sandwich down and covered her mouth with a napkin, swallowing.
+
+<em>I’m . . . not used to eating with someone.</em>
+
+“It’s the same as always; familiar, delicious.”
+
+Alice picked up the cup, sipping the contents from it with a half-smile.
+
+<em>Do people do this often? Maybe I could ask my friends to eat lunch with me more. . .</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194682872456560680 class=chatlog__message-container data-message-id=1194682872456560680><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 11:43 AM"><a href=#chatlog__message-container-1194682872456560680>1/10/2024 11:43 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;That&#39;s good...&quot;
+
+Sinclair wished he could let his guard down, and enjoy this moment with Alice. Most times he&#39;s dining with a girl, she happened to be too excitable for him. But he knew trouble could be around any corner, so he tried to keep a weathered eye out.
+
+<em>Should I ask questions now? Or wait till she eats? I guess a few quick ones would help.</em>
+
+&quot;Just a quick question Alice, how old are you? And if you&#39;re still in school, what are you studying?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194693162472583188 class=chatlog__message-container data-message-id=1194693162472583188><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 12:24 PM"><a href=#chatlog__message-container-1194693162472583188>1/10/2024 12:24 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Ah—mm!”
+
+Alice sipped her drink still, before putting it down to answer Sinclair’s questions.
+
+“Uhm… I’m 21, and… I’m currently studying in music education.”
+
+Humble desires of being a teacher, taking after her own professor — and someone else she couldn’t quite define yet.
+
+Alice went back to her food briefly, seeing if the answers were sufficient.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194747622683058267 class=chatlog__message-container data-message-id=1194747622683058267><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:00 PM"><a href=#chatlog__message-container-1194747622683058267>1/10/2024 4:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;That&#39;s wonderful... thank you for answering the question. If I have anymore I&#39;ll ask them as they come up.&quot;
+
+<em>She&#39;s older than me...</em>
+
+He went back to shoveling mousse into his mouth. He realized now, that due to his direct contact with Alice, it&#39;d be difficult to communicate to the rest of his coworkers. Excusing himself from the table was not an option as it would leave Alice vulnerable, so he had to roll with it.
+
+<em>Once she&#39;s done eating she should be heading home, from there my job will be done...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194748619115483278 class=chatlog__message-container data-message-id=1194748619115483278><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:04 PM"><a href=#chatlog__message-container-1194748619115483278>1/10/2024 4:04 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Ah. Mmm… I have one question though, ah— you mentioned having associates?”
+
+She tilted her head just slightly. Alice’s expression changed to one of curiosity.
+
+“What… firm do you work for, if I may ask?”
+
+She could have asked before, but Sinclair seemed to be in a rush. Alice also figured it’d be a little rude to ask who he worked for so readily, but now was not a bad time.
+
+Suddenly, her attention fell on her sleeves as she awaited his response. Two small red lines were on the tops of her wrists, now lightly scabbed from such a minimal wound. Her sleeves, however, remained cut and imperfect — meaning a trip to the tailor was now on her future to-do list.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194751349674492047 class=chatlog__message-container data-message-id=1194751349674492047><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:15 PM"><a href=#chatlog__message-container-1194751349674492047>1/10/2024 4:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Oh. My firm... o-of course...&quot;
+
+<em>Schei&#223;e.</em>
+
+Of course, his lie had caught up to him now.
+
+&quot;My firm is named...&quot;
+
+He scanned his eyes around the room, looking for an answer anywhere..
+
+&quot;Cut Cloth Company. CCC. The name is a bit strange, but I was told it means that we&#39;re all cut from the same cloth. A true star can shine from anywhere.&quot;
+
+Sinclair internally prayed that she believed him.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194752910475657347 class=chatlog__message-container data-message-id=1194752910475657347><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:21 PM"><a href=#chatlog__message-container-1194752910475657347>1/10/2024 4:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Somehow, Alice believed it.
+
+Her eyes seemed to light up from the explanation as she nodded along.
+
+“Aahhh… interesting…”
+
+<em>No wonder I was chosen. Hm.</em>
+
+Her gaze returned to her sleeves, but she tried to continue eating so her brain would be distracted.
+
+<em>Ghh… it’s gonna be hard turning him down. He’s… kinda cute, and very nice.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194757385688977419 class=chatlog__message-container data-message-id=1194757385688977419><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:39 PM"><a href=#chatlog__message-container-1194757385688977419>1/10/2024 4:39 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Mhm. I believe I have all the info I may need Miss Alice. Is there anywhere you&#39;re going after this?&quot; He asked as they approached the tail end of their meal.
+
+<em>If she&#39;s going home now, I just have to escort her and it&#39;ll be a mission success.</em>
+
+The parting would feel a little bittersweet, given the small crush he had developed on her. But he would be at ease with the fact she was safe.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194758467756490873 class=chatlog__message-container data-message-id=1194758467756490873><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 4:43 PM"><a href=#chatlog__message-container-1194758467756490873>1/10/2024 4:43 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;...after this? I need to head home after this, I think. Mhm. If I&#39;m home too late, I won&#39;t have time to feed Mirai, and he gets really upset when he&#39;s hungry...&quot;
+
+She nodded with her statement, soon forcing the strawberry scone she ordered in her mouth. It was cooler by now -- Alice hated when she ate them fresh, as her tongue would burn. 
+
+Another question would be posed, but she found herself blanking out on exactly what was on her mind. She looked to the wall behind Sinclair at a clock -- <em>16:13.</em>
+
+<em>Okay, I still have some time...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194768005217923092 class=chatlog__message-container data-message-id=1194768005217923092><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 5:21 PM"><a href=#chatlog__message-container-1194768005217923092>1/10/2024 5:21 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Mhm. I see. In that case, if I&#39;d be so rude may I walk you home? I&#39;ve heard that things have been dangerous lately... I&#39;d hate for something to happen to my talent before she ever hits the runway, y&#39;know?&quot;
+
+<em>Isn&#39;t it weird for someone you just met to walk you home..?</em>
+
+&quot;O-or if you live far we can call a taxi...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194768621390544916 class=chatlog__message-container data-message-id=1194768621390544916><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 10, 2024 5:23 PM"><a href=#chatlog__message-container-1194768621390544916>1/10/2024 5:23 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>A--Ah?! I-i&#39;m not even being given a chance to refuse...</em>
+
+She nodded nervously, swallowing the scone in her mouth. &quot;I live close, it&#39;s within walking distance, but, uhm--&quot;
+
+Alice paused.
+
+&quot;...You can walk me home, that&#39;s okay.&quot;
+
+<em>Today&#39;s a unique day, I guess. Mmmh. When Gino gets home, I&#39;ll have a story...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194880847363461243 class=chatlog__message-container data-message-id=1194880847363461243><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 11, 2024 12:49 AM"><a href=#chatlog__message-container-1194880847363461243>1/11/2024 12:49 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Wonderful... I&#39;ll just call the server over for the check, and we&#39;ll be on our way once we&#39;re done eating.&quot;
+
+Sinclair waited for their waiter to pass by them once more, requesting the bill for the table, whom happily obliged before disspearing to fetch it.
+
+&quot;A-apologies for how abrupt everything has been. As I said, this business is highly competitive. If it hadn&#39;t been me, I&#39;m sure anyone would have taken you!&quot;
+
+<em>Taken you or your head...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1194881750510358608 class=chatlog__message-container data-message-id=1194881750510358608><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 11, 2024 12:53 AM"><a href=#chatlog__message-container-1194881750510358608>1/11/2024 12:53 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;It&#39;s... okay. Uhm. I understand, it&#39;s pretty fast-paced, mm.&quot;
+
+<em>Just like whatever cut me... was there something important about ... Ah, I shouldn&#39;t delve too deep into it.</em>
+
+Alice was thankful for the free lunch. She pulled her bookbag closer to her, then held one finger up before pointing it to the door that lead to the delicatessen. 
+
+She left the table pretty quickly. 
+
+<em>I can&#39;t forget.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195240390786293831 class=chatlog__message-container data-message-id=1195240390786293831><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 12:38 AM"><a href=#chatlog__message-container-1195240390786293831>1/12/2024 12:38 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;O-oh. Alright.&quot;
+
+Sinclair had forgotten she had placed a deli order. Whatever it was, they could stop and pick up pretty easily.
+
+<em>So after she gets her things, I think we&#39;re free after the walk home!</em>
+
+Sinclair felt relief in his chest, from being free from this stressful mission.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195241260391346196 class=chatlog__message-container data-message-id=1195241260391346196><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 12:42 AM"><a href=#chatlog__message-container-1195241260391346196>1/12/2024 12:42 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a few minutes, Alice had returned. She held a small opaque bag in her hands, but it was quickly concealed within her bookbag.
+
+&quot;Okay, sir-- I think I have everything in order now. Are you ready?&quot;
+
+As she pulled her bag closer to her, Alice stood tall. Even if she was of shorter stature, her posture was immaculate -- it almost made her appear taller than she really was.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195245374332485633 class=chatlog__message-container data-message-id=1195245374332485633><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 12:58 AM"><a href=#chatlog__message-container-1195245374332485633>1/12/2024 12:58 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Y-yeah! Lets start moving. We don&#39;t want to get caught in the rain...&quot;
+
+It had been raining lightly all day. Not enough to make going outside intolerable, but heavy enough to notice it batting you on the face and shoulders.
+
+Sinclair pushed his glasses closer to his face, and stood up from the table.
+
+&quot;Ready when you are.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195246641872109618 class=chatlog__message-container data-message-id=1195246641872109618><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:03 AM"><a href=#chatlog__message-container-1195246641872109618>1/12/2024 1:03 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Quietly, Alice pulled out her umbrella to keep by her side until they were out. 
+
+&quot;I&#39;m ready -- I&#39;ll lead the way, you can uhm... stay under my umbrella. That jacket looks very nice, and I would hate for it to get ruined, sir.&quot;
+
+Her voice was quiet and sweet, showing her genuine concern over Sinclair&#39;s clothing.
+
+<em>You&#39;ve already done so much for me, it&#39;s the least I can do to repay you...!</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195248790148501524 class=chatlog__message-container data-message-id=1195248790148501524><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:11 AM"><a href=#chatlog__message-container-1195248790148501524>1/12/2024 1:11 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;O-oh? A-ah...&quot; He began to stammer.
+
+<em>What? Me? Her? So close? She&#39;s my client so being near her is a given but...</em>
+
+He turned his head away to try and hide the blushing growing on his face, while he slid beneath the shade of the umbrella.
+
+&quot;T-thank you... lets get moving...&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195250242476593192 class=chatlog__message-container data-message-id=1195250242476593192><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:17 AM"><a href=#chatlog__message-container-1195250242476593192>1/12/2024 1:17 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Alice nodded, walking Sinclair to her home. Usually, the path would be sunny and full of leaves blowing in the wind. However, with the light rain, the clouds blocked the sun and left a light -- but slightly dulled landscape in view.
+
+It was a mild gray haze she seemed to enjoy a little more than the bright sunlight.
+
+Alice kept quiet, just focusing on the road and how many steps it took them. She pondered the reality of that modeling job -- not knowing it was a fluke -- but something in her wanted to take it up just to remain in contact with Sinclair.
+
+<em>...Gino might not like hearing about it, but he doesn&#39;t have to.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195252185244643450 class=chatlog__message-container data-message-id=1195252185244643450><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:25 AM"><a href=#chatlog__message-container-1195252185244643450>1/12/2024 1:25 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>It feels so awkward... we&#39;re so close to each other, but she&#39;s so quiet too...</em>
+
+The journey so far felt dreadfully silent. There wasn&#39;t any words spoken on either side, and Sinclair felt more than flustered due to their proximity. Nor could he bring himself to speak, instead staring on at the path ahead of them, ocassionally looking back to ensure nobody was tailing them.
+
+<em>I hope nobody gets mad I haven&#39;t reported back recently... last time this happened Miss Rodya lectured me for like an hour and sent me to buy donuts as a punishment...</em></span> <span class=chatlog__edited-timestamp title="Friday, January 12, 2024 1:26 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195256246907965460 class=chatlog__message-container data-message-id=1195256246907965460><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:41 AM"><a href=#chatlog__message-container-1195256246907965460>1/12/2024 1:41 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Fortunately this time, there were no animals along the path like the case file had denoted. Alice eventually walked them to a moderately sized home, clearly showing the high status -- if the fact that the Zwei were hired in such a large capacity wasn&#39;t enough of an indicator.
+
+&quot;We&#39;re here -- sorry I didn&#39;t say anything, I usually like to quietly enjoy the scenery when I walk home.&quot;
+
+Alice gave a small smile, half-bowing towards Sinclair. 
+
+<em>I don&#39;t really want to say goodbye yet...?</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195258687401500703 class=chatlog__message-container data-message-id=1195258687401500703><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 1:51 AM"><a href=#chatlog__message-container-1195258687401500703>1/12/2024 1:51 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;I-It&#39;s not an problem. It was my pleasure, have a wonderful evening.&quot;
+
+He returned the bow as well before walking away.
+
+<em>Wait! I&#39;m forgetting something!</em>
+
+He turned on his heel, presenting a bag.
+
+&quot;Oh! I nearly forgot, I-I think this was yours? I&#39;m sorry... but it&#39;s broken...&quot;
+
+He extended a small bag containing the shattered metronome to her.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195264264634638427 class=chatlog__message-container data-message-id=1195264264634638427><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 2:13 AM"><a href=#chatlog__message-container-1195264264634638427>1/12/2024 2:13 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;A--Ah? Wait, you--&quot;
+
+Alice&#39;s entire face went red. 
+
+&quot;Ahhhh... Thank you! It&#39;s okay-- I can get it fixed.&quot;
+
+She took the bag, looking into it -- just as expected, the glass was still broken, but it could still work fine. It&#39;d just be a small repair.
+
+In a quick moment of excitement, Alice pulled Sinclair in for a small hug.
+
+&quot;Thank you again, sir...! Have a good day.&quot;
+
+When she let go, she gave a small salute, not even giving too long of a moment for either of them to stew in the hug. She turned away and tried to get inside before she got too rained on.
+
+<em>That might have been a mistake...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1195267180409921576 class=chatlog__message-container data-message-id=1195267180409921576><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Friday, January 12, 2024 2:25 AM"><a href=#chatlog__message-container-1195267180409921576>1/12/2024 2:25 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Aah...&quot;
+
+Sinclair was left a red similar to the strawberries in Alice&#39;s scones. When he snapped out of his brief stupor he turned away and marched on. He held his communicator up to his mouth, trying not to sound embarrassed over the line.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">A-Apologies for my silence... Client has been safely delivered to their home. Mission success... n-no direct contact with assailants.&quot;</code>
+
+<em>I feel bad for lying to her... I hope she wasn&#39;t too eager to become a model...</em></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 55 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

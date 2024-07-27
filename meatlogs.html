@@ -1,0 +1,775 @@
+<!DOCTYPE html><html lang=en><head><title>the progis hideout - Meatlogs</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/1004200967094411354/433041f34383c365cfb28d431ee1745d.png?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>the progis hideout</div><div class=preamble__entry>creamed corn / krispy-kreme / Meatlogs</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1007146681382469752 class=chatlog__message-container data-message-id=1007146681382469752><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Thursday, August 11, 2022 12:41 AM"><a href=#chatlog__message-container-1007146681382469752>8/11/2022 12:41 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 1: Gifts
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <strong>Content warnings: descriptions of gore, violence, insanity.</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ 
+
+
+
+I forgot how we ended up here. It was a business meeting, a group of friends, then white halls and the smell of chlorine. 
+
+Did i wake up here? All i remember is telling my lover that he means everything, and then seeing barred windows decaying from such busy people inside. 
+
+A few corpses hang in the room. I forgot what I did to them, but I think they’re there for a reason.
+
+So i grab a tool I found strapped to my hip. From there, I began to open these gifts.
+
+The lights seemed to sparkle with each cut, as I organized all of the presents within the box to my liking. There were 3 of them, only one was familiar: after all, it was a gift from my old best friend, B! 
+
+Panpan probably passed by the room twice as I was working. I made sure to keep the door shut, as such master craftsmanship has to be contained. When i stepped out, I was covered in sparkles. Bright red and smelling fresh, it was like I had my own party. So many gifts, shaped like beans and snakes and hearts and so many fun things. 
+
+I began to string the decorations. This would be my private space, next to my more public space which was lined with all of my favorite things, and …. Missing my favorite person. 
+
+Did things seem tense? It didn’t matter. Though, once I had hung up everything and put away the packaging, the smell got blocked with the realization that I needed to do something.
+
+How much time had passed? According to the clock, only 2 days.
+
+Damn… I was too busy decorating before I realized I needed to protect those secrets. <em>Those… those secrets that they keep using like they’re meaningless.</em> 
+
+Ah.
+
+Whatever, I’m sure I still have time. I’ve only seen panpan so far. Maybe when I come back, there’ll be more gifts for me to open.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1007272428222812240 class=chatlog__message-container data-message-id=1007272428222812240><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Thursday, August 11, 2022 9:01 AM"><a href=#chatlog__message-container-1007272428222812240>8/11/2022 9:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 4: Grab
+
+I was doing my job as intended, but that tension I detected day 1 was definitely there. Haha, I guess I can just keep doing my job.
+
+Over time, we got more bits of lore to satiate our hunger, but as of late it’s been rather dry. All I knew was that I had to guard the sunpov secrets with my life until we knew how to use them. 
+
+I blanked out for a moment, then I heard a scream. I looked down, and some hands were holding mine. Beef was there, their hands behind their back as they wriggled on the floor in seeming discomfort. 
+
+<em>Are these their hands?</em>
+
+I put them on top of each other on the table, only to see the others rush in. I could only smile and ask if it was time for another meeting, but they looked horrified. <em>Maybe those are their hands.</em>
+
+Maybe I was the one who cut them. I remember those gifts, and I vaguely remember beef getting erratic, trying to use one of the secrets, so i… handled it.
+
+
+I… <em>Hand</em>led it. Oh, goodness.
+
+They began questioning me, to where I answered with the best of my ability. It was good enough. They decided my actions were justified, but I still felt a little guilty so I returned the hands. 
+
+I wanted to hang them up, kinda, but that’d be a constant reminder of trauma. I’ll do it next time.
+
+Back in the room, more things were hung up. The ones who had a semblance of consciousness were begging me to mercy them, but they began to harm themselves too before they went quiet. I guess they learned.
+
+Welp. There’s more work to be done, still. 
+
+I wonder when he will be back.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1007845719463428156 class=chatlog__message-container data-message-id=1007845719463428156><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Friday, August 12, 2022 10:59 PM"><a href=#chatlog__message-container-1007845719463428156>8/12/2022 10:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 8: Companion
+
+Since Khaos began aiding my work, things have been going rather smoothly for me. I don’t have to go sleepless to guard the secrets, and on occasion he even helps me during hours I can sleep. 
+
+What a good nephew.
+
+I began traveling outside. 8 days is too long without my partner, but i’ve come up rather cold in my searches. So instead I come back with more gifts to string around the room.
+
+And it’s become such a delightful place. I found lights to string upon the lettering. What it said was “Home Sweet Home,” made with the guest’s organs. 
+
+I even began making a cocoon for myself. It isn’t finished, but eventually in the center of the room I can lay down and rest…. With my work. 
+
+The cocoon seemed to be coming together, but I kinda felt empty. So happy before, so empty now. Oh well.
+
+The noise of the other inhabitants is clear, I’ve simply learned to ignore it. A mental breakdown here, a scream there, the yells of the surmount-infested become part of my daily life.
+
+That’s where I source all of my gifts and decorations. If not indoors, then outdoors.
+
+I still think about Beef’s hands. I wonder if they successfully got prosthetics, or they just stitched them back together. I could surely stitch them somewhere. 
+
+Am i writing too much? I think so… 
+
+Ah, I have plans.
+
+Tomorrow, I will begin to cook.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1007869978139176991 class=chatlog__message-container data-message-id=1007869978139176991><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Saturday, August 13, 2022 12:35 AM"><a href=#chatlog__message-container-1007869978139176991>8/13/2022 12:35 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 17: Depthless 
+
+People have begun to have meetings, or rather, <em>congregations</em> in various areas. I can hear them… But I forget the words they say. 
+
+Khaos leaves me with the secrets, I simply guard them with a careful eye. Everyone complains that when i’m alone or focused, i gain a cold and dead stare that can only be described as something like seeing the afterlife beyond. 
+
+I think they might be right. 
+
+The black feathers on my coat began to fall off some, and I began to wonder some things: why haven’t we used another secret? The last one, to ask statuses… didn’t help much.
+
+Someone new visited, Malicious Friend? But we haven’t pulled information out of them like usual. After my negotiations with Ms. Numberline, that supposed “high school biology teacher,” she has disappeared … likely after the attacks from surmount. 
+
+<em>Well, that’s a bust.</em>
+
+I’m glad people are meeting up now. Sometimes i peruse the creativity rooms to witness people’s work, or I visit the individual rooms of those staying in this place. My rooms have gotten much smaller due to the sheer amount of things. 
+
+My bedroom has a bigger bed — i’m saving the spot for my beloved, in the case I see him again. It’s been so long. I began to hang things that weren’t my gifts and let it be a normal space.
+
+The other room, however, is crowded. With the cocoon done just 2 days ago, I began to rest in it. I watch the silhouettes pass by the door and watch within, surrounded by the warmth of freshly pulsating life wrapped around me. 
+
+<em>It’s my space to do what I want with it.</em>
+
+So I broke down a wall. I took an axe and broke down a wall to expand. It was so much more space, and so I threw more organs around. I’ll organize them later. I needed to hunt more people for it, but I’m tired. Beauty takes time.
+
+So… I slept again.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1007877874935676998 class=chatlog__message-container data-message-id=1007877874935676998><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Saturday, August 13, 2022 1:06 AM"><a href=#chatlog__message-container-1007877874935676998>8/13/2022 1:06 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 22: Ballot
+
+The following entry will be shorter.
+
+This Malicious Friend character is interesting. I … ended up hearing from others that they’re dubbing them “malffy,” I guess. Malffy has begun making their presence known. Taking a poll on if we like sunpovfan, appearing briefly, changing status and appearance as desired, it was interesting.
+
+They also began calling me a name. Those who didn’t call me Auntie called me Yuzu, like the fruit. Is it because of Orange? That’s kind of sweet.
+
+Eventually we were all forced to submit an answer to a ballot for red vs blue. How peculiar, a mere little preference. Hopefully it’s important enough to deal. I only took a moment to think of my answer.
+
+I love the color red, so it was my vote.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1008843747309662312 class=chatlog__message-container data-message-id=1008843747309662312><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Monday, August 15, 2022 5:04 PM"><a href=#chatlog__message-container-1008843747309662312>8/15/2022 5:04 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 25: Combat
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <strong>GROTESQUE DESCRIPTIONS OF GORE AHEAD.</strong><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️
+
+Ah. So we&#39;re supposed to fight? Great... apparently we were given powers, too. I don&#39;t recall all of the details but it seems rather straightforward. Red team Vs. Blue team. I don&#39;t think I know everyone on my team, but I know the people I love most are not with me.
+
+C&#39;est la vie. I&#39;ll do what I can to eliminate them.
+
+Dozens of people were on each team, some by choice and others by random selection. I know who&#39;s here by choice -- they&#39;re wearing arm or wristbands, the rest have markings on their cheeks.
+
+Malffy said we were given powers. I could guess partially what mine is, because they mentioned it related to our activities in here or what we are known for in general. Well, does my room not give it away? I waltzed over to one of the red-cheeked individuals and tilted my head. 
+
+Combat began, but as soon as we locked eyes they froze. I gave a friendly grin, &quot;Yuzu&#39;s the name,&quot; I murmured, holding out my hand with pink-faded fingertips. <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">They took my hand, opened their mouth to utter their name, but out only came blood. Tons and tons of blood that began coagulating to their skin and clothes, clotting like cream and swimming along their body.</span>
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">That body began to contort itself. It formed a pillar-like shape, reinforcing itself with bits of deep golden stone and their bones. I watched the structure pulse rhythmically, even reacting to my humming.</span> How neat!
+
+So, to see the extent of my power, I lifted my right hand. It began to float, following my command easily. By now, most people who remained were staring in horror at what I had just done. I didn&#39;t mind it, I guess I&#39;m upset it can&#39;t go into my room. 
+
+Why were they standing still anyways? Were they looking to be reshaped as well?
+
+With two hops over, I was touching and tapping more people and watching them make various shapes, until <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">a fleshy arm comprised of the others I touched floated by my side.</span> It mimicked my left hand&#39;s movements, making fists and signs as I did.
+
+No one else stood by my side by the time it was crafted. All I saw was a figure in the hallway. I barely recognized them, but I saw a blue armband. It was almost instinct how I instantly fired at them. My eyes were cold and dead, staring beyond the person and beyond the walls.
+
+I watched the impact.
+
+How it contorted and made such a horrible sound when it hit the wall.
+
+The sound of beautiful work going to waste.
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">The bones crunched, the flesh compressed and squished, blood flew everywhere like a rain shower.</span> And the person who nearly got killed by that launch? It was...
+
+PunPun. 
+
+I&#39;m ... i&#39;m so sorry.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1009306480685629450 class=chatlog__message-container data-message-id=1009306480685629450><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Tuesday, August 16, 2022 11:43 PM"><a href=#chatlog__message-container-1009306480685629450>8/16/2022 11:43 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 25 …. Counterpart
+
+After launching the pillar, I noticed my eyes were open. From up to that point, I relied moreso on the vibrations around me to know what I was doing, where I was. I’d only open my eyes in my rooms to stare at the portraits of my beloved and I.
+
+But now, I was staring doe-eyed at my friend, blue armband glaring right at me. Hm. I smiled briefly. My body was shaking so violently. This can’t be real…
+
+It simply can’t be. I kinda stood there and kept the expression, as if I was looking beyond. I’m sure PunPun is confused to why my eyes are open for once, but when I stopped staring into the Aether an attack was coming my way.
+
+I dodged. And thus began smiling wider.
+
+I must’ve been possessed, because my next move was to just … do it again. I began running, the large constructed arm clenching an identical fist to mine and leaving a trail of blood and oils on the walls and floors as i passed. Is she following?
+
+Yep. Good.
+
+I saw a red-cheeker ahead. Those… those poor souls with their unlucky marks, they’re my ammo. I stopped quickly to block the path with that arm, but stop the red-cheeker and grin at them. 
+
+Tap, tap. They began to fold. I murmured some useless words of reassurance as they became my projectile — in some way, shape, or form this would pay out. 
+
+My eyes closed again as I chuckled. I lifted my hand carefully and aimed it before…
+
+… something hit my back. It was enough to get me to hit a wall with another cheeker, and destroy the hand I had so wonderfully crafted out of people. No fun… i didn’t get to use it. Turning back, it was Binah. What was that object, though? 
+
+I didn’t have enough time to ponder as I became frantic and saw the other cheekers trying to leave - so i began touching and dancing and waltzing with as many as possible, becoming more pillars and making such horrid noises. 
+
+Noises I became used to, just… not in that volume.
+
+I aimed that first pillar at PunPun, shooting it with such elegance until that witch’s weaker pillars intercepted my shot and ruined my moment.
+
+When I locked eyes with Binah, our black irises could’ve nearly ignited with determination. 
+
+I could’ve gotten a point for that, yknow.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1011489280650121256 class=chatlog__message-container data-message-id=1011489280650121256><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Tuesday, August 23, 2022 12:17 AM"><a href=#chatlog__message-container-1011489280650121256>8/23/2022 12:17 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day ???: Love
+
+It’s been almost a month since we’ve been here. At least, from my memory.
+
+No one’s explained to me why i’m losing a portion of my memory, maybe it has something to do with the fact I woke up in a hospital bed — a fresh one, not a worn down one like the others. A newly renovated sector of the hospital, just before the outside became inhabitable. 
+
+So I remembered a few things beforehand. Telling my lover about this sunpov thing, we tried figuring out things — well, I figured it out. He just listened and agreed. It was what he was good at, which I remember appreciating.
+
+I wonder if he was still alive by now. Orange wasn’t one to survive on his own, his brain was smart but not when it came to surviving. I’d have to make the shots, i’d have to cut and serve the meals. 
+
+We even would make theories as new things came out. He was never updated, working so hard to provide for us, and so I would debrief him on new things. His head would spin but i’d be brimming with ideas, and when I became happy he’d share the joy with me. 
+
+Sometimes i’d even have to explain things three or four times. He didn’t mind my violent nature, it was survival. I build my things for him. I keep a spot in my normal bed, untouched by flesh, blood, or bone, just in case he’s still there. Why? Well…
+
+ I loved having him around. He made things less scary. There’s what, 300 people in this place? Maybe it’s more nearing 200 by now. I really do wonder if he’s alive. 
+
+There was no time to wonder, though, as my wide open eyes blinked to throw me out of that chance. Binah stared back at me, and all I could do was smile.
+
+Ahh, right. I’m still here.</span> <span class=chatlog__edited-timestamp title="Tuesday, August 23, 2022 12:18 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1011489743567073422 class=chatlog__message-container data-message-id=1011489743567073422><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, August 23, 2022 12:19 AM">12:19 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Not 100 i have not killed 200 people</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1013648425943826462 class=chatlog__message-container data-message-id=1013648425943826462><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Sunday, August 28, 2022 11:16 PM"><a href=#chatlog__message-container-1013648425943826462>8/28/2022 11:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 25 (still): Conflict
+
+Damn… Letting myself get lost in thought is a bit too dangerous right here. All i really wish right now was to be away from it all.
+
+I had a fly to smash into pieces right now. So I took two pillars, sitting in bloody and meaty perfection, launching them towards that heretic. 
+
+Boom. Crash.
+
+They smashed them with their own pillars. My eyes were blank, lifeless, but my heart reeked of unrest.  Funny... It takes four to defeat one. 
+
+That cursed thing didn’t hit, though. No matter. I knew the statistics, all I need is a strategy. I turned my back, clutching my cloak in my gloved fist only to see everyone around me had run. My ammo was slowly depleting, too, but I saw that they also had little resources left.
+
+Good! We’re in the same boat. But that’s not enough of me.
+
+I stepped back with enough force to nearly shatter my heel, my fist being clenched tightly. I wish that in my place was the arm, heavy and waiting to immediately squish this wench. 
+
+However, the sound of crushing flesh only resonated. A ball of blood was forming. This could be… good. Is this the extent of my power? 
+
+I smiled at it, then turned back and straightened the collar of my turtleneck. When the timing was perfect, my heel shifted back and it flew.
+
+It impacted Binah and sent blood flying. How… how beautiful.
+
+Mist filled the room, and I prepared for the consequences. They couldn’t be too bad; after all, I have the upper hand. Maybe, then, I could nullify the consequences with……
+
+I shot a pillar right at them. Oh, my.
+
+I couldn’t bring myself to even close my eyes once more to shield myself from the sight — do I regret that? Not at all. There is nothing to regret here. I heard the sound and saw the sight. 
+
+Thank goodness, I did it. Was the announcement going to happen soon? Malffy had quite the bothersome tendency to interrupt me, perhaps this time i’d be congratulated?
+
+I needed to go check my kill. Waltzing over, I blinked a few times to make the image clearer.</span></div></div></div></div><div id=chatlog__message-container-1013648496303280198 class=chatlog__message-container data-message-id=1013648496303280198><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, August 28, 2022 11:17 PM">11:17 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Nothing was there. Now, where did that little… 
+
+Before I could finish that thought, I was being thrown against the same wall and slammed to the ground. I could only cough and try to regain my strength and fortitude once more.
+
+“What a beautiful display,” they said with a condescending tone. “However, your grand show revealed a blind spot- that’s how I escaped.” 
+
+I couldn’t believe it. I wanted to respond, but my lips couldn’t utter a word. I couldn’t even shut my eyes, they stared at my bloodied fists begging for something to grab. 
+
+I then heard footsteps getting closer, and felt additional impacts. One, two, three, four, five, six. It was painful. I’m sure one more… one more would kill me.
+
+But I had just enough strength. Just enough strength that, when Binah stepped just a bit too close, and I noticed that last pillar. So… I destroyed it with my own, and pulled that witch down to my height. 
+
+My eyes shot open as I brought my knees to her sides and grabbed her neck, choking her with all the strength I had left.
+
+Oh, Binah. Sweet Binah. If you’re gonna die here, I want you to suffer as much as possible. I want your vision to run out and my cold, dead eyes are the last thing you see. It’s only fair you watch your closest copy be your demise… right?
+
+I could make it easy. I could send a pillar right to your skull, but no… that’s so simple, it’s not traumatizing. As i felt a slight crunch between my hands, a pillar shot me right in the head.
+
+I shook off the debris. It didn’t matter right now. I’m finally winning. I’m finally ending this. 
+
+I watched them clench their fist, not noticing they were using the same tactic I had used earlier. Without realizing, dust began to fill the room. It was thick and irritating, getting right into my eyes.
+
+My haze ended as I began coughing and screaming, hands rushing to cover my face and clear that debris. In that moment, I barely even noticed I was shoved to the side and my prey ran off.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1013650759184826398 class=chatlog__message-container data-message-id=1013650759184826398><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Sunday, August 28, 2022 11:26 PM"><a href=#chatlog__message-container-1013650759184826398>8/28/2022 11:26 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>It hurts, it hurts so bad. I couldn’t even see anything after this. So much debris, it was hard to even see my hands in front of me. 
+
+So, blindly, I stepped forward until I had fallen into a hole. Was this the punchline? Did Binah really want the last laugh that bad? Sigh.
+
+I won’t get out of this without help. This position is too vulnerable, too, so I guess I’ll just ….
+
+Hmm.
+
+Wait, what? No. No way.
+
+My pillars… are gone. Shit.
+
+As things cleared up, Binah stared down at me with that horrible grin and a pillar casting a shadow above my head. 
+
+This isn’t quite the glorious death, is it? Mm. 
+
+I closed my eyes and winced, waiting for the worst fate. It would be quick, right? I guess karma was real in that moment.
+
+I heard a sound of crushing. That’s my bones being crushed, isn’t it? …no? I feel nothing. 
+
+I looked up again. That pillar that would’ve killed me was destroyed. Binah looked defeated, too. At least, until another pillar was being made — and then everything got interrupted.
+
+Gunshots? Who the hell has a gun…? 
+
+Binah seemed to disappear after a small signal they weren’t done yet.
+
+And now, i’m left with Khaos to deal with. All of my victories amounted to a total loss… that happens.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1022726605090607196 class=chatlog__message-container data-message-id=1022726605090607196><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Friday, September 23, 2022 12:30 AM"><a href=#chatlog__message-container-1022726605090607196>9/23/2022 12:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries? - 1
+
+Hi! My name is Demeter, i’ve been living in this….place… for about a month I think? I got handed this random book by some person in a big dark cloak, their eyes looked glazed over in mania. They kinda smiled at me as they handed it over, telling me I wouldn’t die if I kept this in my hands.
+
+So, I guess I’m the caretaker of this notebook. Where do I begin? Well, I woke up in this place with very few memories. I heard about the 12th Annual Sunpov Meetup, and I had <em>no clue</em> what that meant - so I chose to find out, and I guess I’m here now. Things got so complicated eventually, I barely remember anything I’ve done up until this point. 
+
+///—//————// \\ oooooo.
+
+But here I am, shaking with blood on my hands and my legs and all over my torso, and big bright red circular marks on my cheeks. I wonder what that means. I wonder what’s going on. I saw that whoever gave me that book had a red armband, and not too long ago I saw people with blue markings on their cheeks. Is this some war we’re in, where…. Those armbands mean those people are leaders and we are just players? Or is it something else?
+
+I’m so confused. 
+
+I hear screams and distant sounds of contorting flesh, and suddenly the intercoms that were integrated into the building rung free. Hmm. Who’s that? They have a weird face.
+
+I don’t think I actually am listening to this intercom announcement…
+
+X, O, O, 
+X , O, X, 
+O, O,  X. I won!
+らりるれろ ~ たちつてと
+
+O00o. 00. Oooo. vvvvvwwwww vvvvvv ww vv www uuuuuuu wwww.
+
+I saw a man run into the room frantically. He glared at me and the uh, maybe 20 other people with red and blue cheeks, almost throwing one to the wall. He murmured something under his breath - Bleach, Teach… something like that… maybe Peach? He was looking for someone. He definitely saw the book in my hands, as he glared at me before dismissing my existence in his head.
+
+<em>[the following text is scribbled out.]</em>
+
+The person he grabbed started … convulsing violently. The man’s left fist was covered in a large, fleshy gauntlet— hey, I saw this in a game before— and the person seemed to be melding into the perfect shape to repair part of that fist. The man left the room promptly. That person… they were a hollowed corpse after that.
+
+I think I can now feel my spine shivering. I should go hide, right? That might be me next, or maybe that person who gave me the book ensured I got spared.</span> <span class=chatlog__edited-timestamp title="Friday, September 23, 2022 3:31 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1022902243667755138 class=chatlog__message-container data-message-id=1022902243667755138><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#pencil-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span> </span> <span class=chatlog__system-notification-content> <span>changed the channel name: </span> <span class=chatlog__system-notification-link>Meatlogs</span> </span> <span class=chatlog__system-notification-timestamp title="Friday, September 23, 2022 12:08 PM"> <a href=#chatlog__message-container-1022902243667755138>9/23/2022 12:08 PM</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1022918629848784986 class=chatlog__message-container data-message-id=1022918629848784986><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Friday, September 23, 2022 1:13 PM"><a href=#chatlog__message-container-1022918629848784986>9/23/2022 1:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries - 2
+
+I think if the person reads through this they’re gonna want to know why I wrote in this. I guess… to make the book feel less lonely? A lot is going on, i’m actually really scared, but I have no other choice than to just keep going. 
+
+Music was playing in the distance. Others around me are trying to find places to hide, grabbing at blankets or cabinets or shoving endless syringes onto the floor to contort themselves into any space they can find. 
+
+I’m clutching the book tight to my chest right now only so I can get a semblance of safety. I feel like a few blue banded people ran past… I don’t have the energy to check. 
+
+I darted to another room, trying to find a good place to cover - it was a large gathering area, with a few tables thrown against the wall and a lot …. A lot of dead bodies, holes in the wall, and i guess… remnants of pillars made of people? Weird. 
+
+I dipped and dodged behind a table, watching what was going on. There was yelling and fighting. The person who gave me that book… they were fighting someone else. 
+
+They got knocked down violently, and they grabbed the leg of the other person and tried to throw them down too… they could not. They twisted, and I could hear the sounds of grunting and struggling until that intercom system came on. 
+
+“Sorry to interrupt,” it was that same character before. “That is not how that power works, Yuzu. Before you were able to use red-cheekers for your abilities, but people who signed up cannot be used at the cost of Red Team <em>unless</em> they are already dead.” 
+
+The intercoms promptly shut off. I almost smiled widely at that — they probably were fuming with rage, but I’m scared to look. I heard more noises, more struggling, then the sound of heels clicking angrily out the room. 
+
+Y’know… now part of me wishes I interacted more. I’m still so confused, is it because I decided to keep to myself whenever I joined in? Those people might’ve been good friends, haha.
+
+These cheek markings are starting to grow on me. As if i’m some kind of beautiful maiden, and these are the markings to show i’m ripe for the picking. H… Have I read too much royal fantasy manga? No way.
+
+Well, I need to find another place to run. I’ll write another time.
+
+Demeter Out!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1026400881333252159 class=chatlog__message-container data-message-id=1026400881333252159><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Monday, October 3, 2022 3:50 AM"><a href=#chatlog__message-container-1026400881333252159>10/3/2022 3:50 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter&#39;s Diaries - 3 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <strong>content warning: depictions of illness, medical imagery, and misuse of medical instruments</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️
+
+Sorry Diary, I didn&#39;t mean to neglect writing for so long! 
+
+I began putting small pieces of fabric on my fingers, giving myself pseudo-gloves in the process. I ran away to a smaller area of the area, finding a room full of cabinets. When I inspected the cabinets, I was actually horrified by all of the ... discarded medical tools involved. Scalpels, bandages, lots of medical tape, and even syringes. Small bottles of random substances were all over the place too. 
+
+I picked up one of the syringes and a few other random items, actually. <em>[a bandage is stuck on the page, and random notes about its appearance are written around it.]</em>
+
+Something in me possessed me to take one of the random bottles and fill the syringe with its liquid, then simply play around. There was a little something my childhood lacked… what was it?
+
+Ah, experimentation.
+
+No matter! I have now, and I don’t believe I need to fight as hard as the others do. Which is great.
+
+Back to this syringe, the liquid was a light blue color with a tinge of green. The bottle, white and unlabeled, smelled vaguely of raspberries. It was a sweet smell… a little too pleasant for something potentially so dangerous.
+
+I decided to inject it into my arm. This wasn’t the best idea, but there are people out there turning us … er… “cheekers”? Into pillars or using us as energy sources. Like that one who got turned into the next part of a large fleshy gauntlet.
+
+My clear head suddenly dissipated, and only a chaotic sense of madness was left. I laughed and laughed and laughed — I felt pain, but it was so dull it mattered none. Although, what was worse was I was nauseous. I dropped everything in my hands and collapsed on one of the beds in the room, head hung low. 
+
+I’m sure I was seen by someone, as I heard little gasps and sounds of hushed running pass the door amidst my high. Beads of sweat, shiny and cold in nature, began to coat my forehead and forearms. 
+
+I messed up… i’m sorry. 
+
+With as much strength as I could, I stood up and waddled aimlessly through the hallways. They were white, sterile, only the lightest amount of mold stained some corners. If this place truly was abandoned, it was definitely abandoned recently.
+
+Within a few minutes and a few cases of terrified blue-cheekers darting past me, I made eye contact with a girl made of slime, then felt my stomach burst.
+
+Everything I had ate (or drank) in the past day spilled from my insides. A clear, red-tinted liquid surrounded me as I vomited and vomited. I just kept looking at the slime girl until the world went black and I collapsed in the pool of my vomit. 
+
+Still, no pain.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1026407734809202758 class=chatlog__message-container data-message-id=1026407734809202758><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Monday, October 3, 2022 4:17 AM"><a href=#chatlog__message-container-1026407734809202758>10/3/2022 4:17 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries - 4
+
+I woke up in a different corridor. How long was I out? Probably a while, as it looked like things were slowing down briefly and everyone was confused. 
+
+This book seems to have some ability to read or comprehend one’s thoughts and events if they’re in possession of the book, and record them in entries.
+
+What kind of singularity is that?? 
+
+I remember small pieces of the events in that entry. What the heck was I thinking, injecting myself with something random? Well, any chances of addiction got squashed now that it looks like everything is destroyed. 
+
+As I was coming to, I noticed a lot of things were happening. The banded people, they all had their fighting spirit back, and were already into another bout of combat.
+
+I watched that cloaked person.. er… Yuzu? I remember hearing that name. Yuzu and some kind of other person were carrying … an index messenger? By the arms, pointing their arms away from each other and themselves. They seemed to be resisting, but unable to truly get out of that situation — and thus only able to submit to the other two, who both were grinning manically. I looked at them, still on the ground, before the floor beneath us began to shake violently. 
+
+I thought this place wasn’t susceptible to earthquakes, but I guess… I was wrong? I tried to dodge anything above me that might’ve fallen from the ceiling.
+
+Ech… 
+
+I succeeded in avoiding anything, and scanned to find those three people again — right in front of me. That messenger was making their way to escape, the other two managing to start to get up. 
+
+Oh, maybe they’ll get to do what they wante— what is that thing—
+
+Ow. 
+
+I watched something large and grey, and definitely not a boulder, smash into Yuzu. It pinned them against the wall, and instantaneously their dark — almost black blood soaked the wall and the front of that object. 
+
+It slowly peeled itself from the wall, staring down at the other two. That thing is alive?… i gotta get out of here, i’m gonna die next. 
+
+I got up quickly and began running in the opposite direction. Looks like the notebook isn’t gonna have it’s owner back for a while. I dodged through hallways as things collapsed around me. That ever-ringing sound of screams and cries still permeated throughout  the building.
+
+I ran past a room that had dried blood seeping from beneath the door. I stopped and froze — dried blood…. No, that was fresh somehow. 
+
+I saw it was next to another room which appeared clean. The window in the door showed a very ordinary bedroom, as if belonging to a normal couple in contrast to the other room, with a barred window and dark nails keeping the door straight. 
+
+I used my small hands to pry open that barred door. The smell of flesh, both rotting and freshly cut, filled the hallway. Eventually I got the door open— and I realized the rooms were connected with a singular window-like slot.
+
+Where I was standing was a horror show. In the center of the room was a warm, pulsating cocoon. It was made of many corpses and their muscles, tendons, and flesh. It stared at me, wrapped in thorns and bleeding gently as if to invite me to lay in it.
+
+ I looked away.
+
+The rest of the room was also filled with flesh and innards. The walls were seeping with blood, but the other side was still a pristine white. As if to make matters worse, a sign decorated in lights and spelling “Home Sweet Home” was made along the back wall with intestinses. Bloody red intestines. 
+
+I nearly vomited at the sight, but when I looked into the window, another pair of eyes met mine.</span> <span class=chatlog__edited-timestamp title="Monday, October 3, 2022 10:22 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1026414769990811679 class=chatlog__message-container data-message-id=1026414769990811679><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Monday, October 3, 2022 4:45 AM"><a href=#chatlog__message-container-1026414769990811679>10/3/2022 4:45 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries - 5
+
+As if things couldn’t get worse, I was no longer alone. Good thing is, this person with me was the man I saw hours or days ago - who I assume lived here or adjacent to it. 
+
+He didn’t look horrified at the other room, perhaps he couldn’t see it. So many off things were here, I imagine perception-filters were even fine-tuned per person. I’m just a little mad mine is so faulty. 
+
+“Don’t be mad,” I began to say, hands shaking. 
+
+“Mad? Never. I’m confused,” he responded. “I saw you earlier, didn’t I?”
+
+I nodded slowly, making my way to the window slot and leaning into it. I noticed he also had red cheeks… thank goodness we were in the same spot. 
+
+“Yeah. Who are you?” I responded. 
+
+He smirked a little and reached his hand through the window to my side — the one that was not gigantic and made of other flesh — to offer a handshake. He said to me, “Just call me Orange, that’s easiest for you.” He was charismatic, oddly charming and a little awkward for someone in this situation.
+
+“…Your cheeks,” I mentioned, “You have a power?”
+
+“And you don’t? I found mine through a note in my pocket. I don’t know what’s going on, I just wanted to live.”
+
+I shrugged and rested my head on my forearms. Though, hearing what Orange said, I began rummaging through my belongings and pockets until a small slip of paper fell from the notebook. A “D” was on the un-lined side, and on the lined side was a singular word. 
+
+Meniru. 
+
+I… doesn’t that mean to mimic? Does that mean I can imitate others powers? Why didn’t I know this before…? That would’ve saved me so much trouble. 
+
+“Why are you here anyways?” I asked. I didn’t want to let my trespassing go noticed.
+
+“I was going to find stuff to disguise myself as a banded member. Oh, and my partner lives here. You probably know them, you’re holding their book. My peachy, aren’t they great?”
+
+“They’re dead,” I murmured. 
+
+“Dead?”
+
+I only nodded. I turned away just so I didn’t have to watch his reaction, but I knew it was bad. I couldn’t say much else, or I’d feel guilty. 
+
+Orange cleared his throat. His voice got deeper, though it trembled a little. “Thanks for telling me. Why are you here though?”
+
+The truth was curiosity. The half-truth was that I was in need of a place to hide. But, I lied.
+
+“Oh, same reason. A disguise…” 
+
+He smiled. He reached his arm out to me. “Come to this side, we have some cloth we can use.” 
+
+I climbed through the window and got down, landing on my stomach. When I got up, I saw that there were indeed pieces of cloth that’d work. 
+
+“Makeup…?”
+“To hide the cheeks? Yeah, we should have some.” Orange began going through cabinets and drawers before finding a bottle of foundation and a small makeup sponge. How he knew of these, with as dumb as he looked, was beyond me. 
+
+I immediately grabbed the makeup and covered my cheeks, eventually just spreading it so it all looked natural. He started blabbering about Yuzu and how much they cared about sunpov — I can tell he was struggling with the fact they died, his speech was oddly calm. 
+
+When I finished, I took one of the pieces of cloth. Climbing back to the other side… I might be able to stain this with blood. So I took the chance and shoved the white cloth into the bed of the cocoon, watching it turn a deep red in color. 
+
+Gross.
+
+When I pulled it out, Orange was moving to do the same thing while I drained the cloth and made it a bright red, only slightly off-tinted from the normal red band color. It wasn’t noticeable til you made a direct comparison. 
+
+Let’s see if this disguise is a bad idea.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1027408275332939776 class=chatlog__message-container data-message-id=1027408275332939776><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Wednesday, October 5, 2022 10:33 PM"><a href=#chatlog__message-container-1027408275332939776>10/5/2022 10:33 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter&#39;s Diaries - 6
+
+For a while, we began just talking. This person was interesting, he had a way with words that was a little awkward, but he was somewhat in the spirit. I crawled across the gap between the rooms again, making my way to that warm cocoon.
+
+I felt oddly possessed to lay in it. My clothes were soaked red, my normal scent becoming meaty and metallic. The man tilted his head, then simply followed my path. I guess crossing over made his filters do a double take, because suddenly he began to wince.
+
+&quot;mm? is there a problem...?&quot;
+
+&quot;this is just... creepy, man.&quot; He responded.
+
+&quot;Oh, you&#39;re not used to it.&quot;
+
+&quot;Nah. I&#39;m not even used to my own power, anyway.&quot;
+
+I tilted my head. Power? Well... that giant fist attached to his left arm told the answer partially. Seeing my expression changed, the man answered the question before I could even ask.
+
+&quot;If i, like... grab people, I can make them form extra limbs. I kinda use this fist most of the time, but it gets damaged.&quot; The man chuckled. &quot;So I mostly use people to repair it.&quot;
+
+&quot;Oh. Matches your partner, I guess.&quot; I ... felt rather apathetic at this point. My mentality was warping in here. But, a moment of clarity made me realize that I forgot to ask his name. 
+
+Not too late.
+
+&quot;Hey.&quot; 
+
+&quot;What&#39;s up?&quot;
+
+&quot;I forgot to introduce myself. I&#39;m Demeter. Not sure how I got here or why I was chosen to keep, er... this book, but yeah.&quot;
+
+He nodded. &quot;You can just call me Orange. Awesome Orange, if you&#39;re so inclined,&quot; He boasted with a flex of the muscles in his gauntlet. I could only cringe in response. 
+
+&quot;Yeah, cool.&quot; 
+
+Something about watching Yuzu die bothered me. I guess in a sense, I feel unfortunate to have witnessed it and not be able to do anything. Does that mean I have to avenge them? There&#39;s gotta be some reason my ability is mimicry.... 
+
+The smell of blood is making it hard to think.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028512365064486942 class=chatlog__message-container data-message-id=1028512365064486942><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Saturday, October 8, 2022 11:40 PM"><a href=#chatlog__message-container-1028512365064486942>10/8/2022 11:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries - 7
+
+When my eyes opened again, it was because I heard a horrid sound of crumbling. Orange was already long gone, perhaps our prior conversation had ended organically? Haha, what a cool guy. 
+
+I shot up instantly and tried to find something to duck under. A table, a chair, anything works. When I managed to find my cover, I watched the floor beneath me disappear — and so did all of the light.
+
+I’m clutching the book with me as I fall, this thick table and the remnants of the cocoon shielded my fall. I could hear yelling and crying from others. Maybe a ton of people died, but I imagine there’s tons more outside. 
+
+The sheer amount of dust and debris that flooded all of my senses made me pass out. My vision went dark, and I relaxed… though the book was still in my arms.
+
+Funnily enough, I could hear the faint echoes of varying voices. 
+
+“I thought Yuzu was…”
+
+“It’s a long story, but…”
+
+“No one is fighting until…”
+
+Then lots of screaming, only to be followed by silence. Maybe I just chose not to listen at that point. But as I came to — or rather, as I began to let my brain work again, a lot of thoughts began flooding in.
+
+Just… how much was loss with that building going down? I’m sure that Malffy person, they… they’re likely writhing in despair at the loss of their money, their control. 
+
+Some of the other cheekers, maybe, lost their random holes called home and their sense of security from the outside.
+
+But what was the danger from the outside? It’s gotta be gone by now, as much greater threats lie within — or rather, what used to be within. 
+
+Yuzu would be disappointed to know their work was gone, reduced to rubble too. My memory of the place would be somewhat lost as well… I don’t think I personally had a lot attached to that building until recently.
+
+I heard no other sounds, no violence or even anguish.
+
+So, does that mean the war is over? My disguise… for nothing? By now, the makeup must be running off, showing my red cheeks, and the “O” on my armband faded brown to show it’s counterfeit. Maybe Orange’s disguise rubbed off too.
+
+I felt my body hit something soft, then I felt a warmth over me… 
+
+
+and then my eyes opened.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028517561580666931 class=chatlog__message-container data-message-id=1028517561580666931><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Sunday, October 9, 2022 12:01 AM"><a href=#chatlog__message-container-1028517561580666931>10/9/2022 12:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 36: Under the Stars.
+
+My eyes opened too. My, my. My last thoughts were “oh god, no.”
+
+My first thoughts now are “thank god, yes.” 
+
+I’m not sure what i’m looking at, but I see a dull blue color above my head, and I can smell a lot of weird things.
+
+This isn’t familiar, is it? After all, where’s the smell of blood and the sight of my creations? 
+
+I sat up. I looked down at my legs — what was once a velvety, slim skirt that reached to my ankles was now a billowing maiden’s skirt that covered my body. 
+
+I grabbed at the frabric. Pulled, squeezed, wondered how I failed to fit within a sleeping bag. I squeezed at my chest. My chest was familiar — Smaller, but familiar. 
+
+Malffy…. You pervert.
+
+Running my hands down my torso, I felt the softness turn into a stiff leather— a corset? It was compressing my waist, forming an hourglass to my figure and pushing my body into that pristine shape.
+
+I looked at my hands - still as slim as ever, though my array of rings was replaced with golden knuckle-claws. 
+
+Was I given a new appearance after my revival? Nice, I love new looks.
+
+Reaching to put my hand in my hair, I felt a metal headpiece close to my left ear. I ran my finger along it and turned my head… oh, that kid’s next to me. 
+
+I feel a little guilty. I remember giving them my book, the one laid between us right now, but I never really saw what happened while they had it. I imagine, by the nature of how it works, their thoughts and experiences must have been recorded.
+
+I’ll take it upon myself at a later time to read those entries.
+
+My hand gently pressed against their upper arm — I think I need to figure our what happened. The kid jumped a little and turned to me. Although, I like to think they’re around my age… despite my looks, I’m rather young, they’re so small and frail that I can’t help but see them as a child. 
+
+They jolted and turned to me. “Oh— oh— what?” 
+
+Hm? What? Why are they surprised? 
+
+“…you died, why are you—“
+
+“Malffy said he would revive all of us eventually. I kept that in the back of my mind—“ 
+
+We were interrupted by the distant sounds of Malffy explaining what happened. The building collapsed, panpan died, now they’re at camp while hopefully a new place to inhabit is built. 
+
+The kid and I exchanged horrified looks at one another. I have not a clue what they are thinking about, I know I myself am shocked that I even died. 
+
+…I was supposed to be so powerful. Maybe that’s why I had to go. 
+
+They held their hand out awkwardly. Their cheek was smothered in melting makeup, and their hands were coated lightly in blood. Had I not been given a fresh new body, I would have lots of blood on me as well. 
+
+“Demeter’s my name,” they said with a quivering voice. I could tell they feared me — I mean, i’m sure I’m terrifying from the eyes of someone who doesn’t know me— but they made such a brave move. I reciprocated the handshake.
+
+“Yuzu,” I replied simply. They pretended not to know. 
+
+I cracked a small grin, but my eyes stared past their skull. This was all so surreal… I died? The… the building collapsed? 
+
+I don’t think my grief wants to hit me yet, all I can do is stare into nothingness.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028530509766213713 class=chatlog__message-container data-message-id=1028530509766213713><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Sunday, October 9, 2022 12:53 AM"><a href=#chatlog__message-container-1028530509766213713>10/9/2022 12:53 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day 37: Guillotine
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ <strong>Depictions of gore and violence.</strong>
+
+As we began gathering things and getting adjusted to this new living situation, I walked around and simply observed. Things were out of place, some things didn’t load — I wonder if my cognition filter was installed again. I took it out as soon as I woke up in that old building, and I guess Malffy never cared to try and reinstall it.
+
+I saw the dozens of tents. All were the same except one, but what caught my eye was the fact there were so many. 
+
+All of the ones containing at least one member with an armband had either an X or an O. Obviously, mine and Demeter’s had an O across the back, but a warning sign was below it… am I being treated like an animal, a danger?
+
+I could hear the soft buzzing of a crowd of hundreds in an area, the cheekers adjusting to their new looks or remade bodies, banded members laughing and talking among themselves.
+
+I saw a small group of cheekers wearing black — somewhat like those outfits that Binah’s mother’s… assistants would wear, but a bit more scuffed and more akin to my attire. They had capelets and handkerchiefs, all donning similar shades of grey and black. 
+
+I was actually speaking to Binah, the two of us getting over our differences when I spotted the group. 
+
+“You’ve forgiven me for what i’ve done, right?” I asked.
+
+They chuckled. “Only because I know you’re very much like my mother, I can’t stay mad forever. Besides… we no longer have reason to fight, yes?”
+
+I could only really nod. My stare went blank. Binah’s head turned and saw the group… what was it, like a group of followers? I know I was remarkable, but… what in the world is this? 
+
+Binah stopped speaking. They could see my eyes glaze over in memory of my room, yearning for that thrill of working up a sweat and coating myself in blood.
+
+I held Binah’s hand and lifted just barely off of the impromptu bench we sat on- my eyes locked with Demeter’s.
+
+They looked… horrified. As if they were shooing the group, the group of people with brightly colored cheeks and eyes filled with na&#239;ve stars. Demeter was waving away, sweat beading on their forehead as they growled hushed warnings to the group. They ignored — they were so excited to see their idol.
+
+They have to be mocking me, right? They’re asking for me to say something. You don’t just follow the most horrifying person here… you just don’t. I’d have to incite fear in them before they became a problem. Right? Demeter’s brows furrowed in concern. 
+
+When I lifted off the ground, it was like watching a bat take flight. I was light on my feet despite all of the fabric and weight - even in my heels - and moving at almost the speed of sound.
+
+When I stopped, a head went flying. It was launched into the air, a stream of blood spraying from the neck. The expression on the decapitated head was one of ecstasy — which disgusted me. I held in my hand the upper part of their spine, red blood coating the bones and my hands. 
+
+My head was kept low, glaring at the ground. I heard a faint gasp from the group, Demeter wincing from the sight, then excited gasps and giggles from the others. 
+
+The body that was just beheaded staggered for a moment before it collapsed into a pile of confused human anatomy. Blood spilled from the orifices, turning the fingertips pale. 
+
+Demeter and I exchanged looks. Then the others looked at the body. They were speechless and excited, trying to hold their joy. 
+
+Demeter looked over past my shoulder. They could see Binah running up behind me — a move signifying I was about to be detained — just before I felt my body go to the ground, and….
+and…
+I was being tackled. 
+“Damnit, Yuzu” said Binah with a groan.</span> <span class=chatlog__edited-timestamp title="Sunday, October 9, 2022 12:53 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1028841970388439090 class=chatlog__message-container data-message-id=1028841970388439090><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1004200967094411354/users/368895150342012930/avatars/c559beccbbc80f1278116f2f95bc9832.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(107,255,249) title=vogelnotes data-user-id=368895150342012930>anita max nguyen</span> <span class=chatlog__timestamp title="Sunday, October 9, 2022 9:30 PM"><a href=#chatlog__message-container-1028841970388439090>10/9/2022 9:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Demeter’s Diaries - 8
+
+I can’t think anymore with the sound of all of these people. I wonder where Orange has gone, he never seems to stay too long or be around Yuzu even though he speaks so highly of them as if they are tied together at the hip.
+
+My nose began to bleed. I was found again with a group of cheekers. All of us still had our marks, though mine were fading. Maybe I was being given preferential treatment by Malffy. 
+
+They were all in dark suits, starry-eyed and donning golden rings on their fingers. Apparently they’re in the so-called “Fresh Meat of Birth” cult, and it’s centered around… Yuzu? What the…
+
+They began to explain to me their ideologies. After watching Yuzu’s many kills and how they effortlessly turned other cheekers into pillars. They called it a “work of art,” only so honorably able to be matched to the work of a god. Personally, though I wouldn’t consider myself particularly close to them, I find their accomplishments not something to idly praise as these people do. 
+
+Nevertheless, they won’t stop following me as we now share the same book — though mine is a replica, filled with my own thoughts more than their own, some entries are shared.
+
+It was a group of maybe 6 at first, but over the few days we were in this forest it grew to a group of about 25. Some wanted to match Yuzu’s strength. Others were simply wanting to know more. A few less sane ones were seeking their companionship. 
+
+You know, there was one instance where I talked about my interactions with Orange with some of the members. When I had mentioned that I learned from him that he was married to Yuzu, one of the members’ noses scrunched in disgust, another next to them looking heartbroken. What a bunch of weirdos. I think I may have actually crushed the hopes and dreams of some poor randos.
+
+When I asked about Binah, they said they appreciated them, but some preferred their mother, and some didn’t care much for them. Interesting… I was under the impression that Binah and Yuzu were one of the same. Or maybe, like siblings, they come from the same source.
+
+These people were a bunch of freaks.
+
+We were all chatting in a small clearing around a makeshift campfire. They gave me an elegant suit similar to their uniforms, but maybe it was a getup more fit for a leader… did they see me as a leader? Well, my overalls were getting dirty, so I took the offering.
+
+One of them had spotted Yuzu only a few hundred feet away. I stepped so I wasn’t involved in the group, but I was near them, holding the silk clothing to my chest. 
+
+What I saw next was dead black eyes meet a bundle shining stars.
+
+The cheekers giggled excitedly, tapping one another with little gasps. It was like fans meeting a celebrity… their dreams were coming true. Though, I saw Yuzu wasn’t happy.
+
+Their shadow came closer. And closer.
+
+“… are they coming toward us?” I asked. “Oh no… guys, split.”
+
+The group of cultists began gasping, pushing one another out of shyness. The shadow grew larger and larger… Yuzu moves so fast, it’s horrifying. 
+
+I jumped out of the way as they rammed right into the group, only to come to a sudden stop. Uh…What? Why…?
+
+They had nearly phased through one of the members. All the others formed a perfect crowd around the scene, as Yuzu’s arm was in the air covered in blood. Their face only had a few specks, not enough to ruin their makeup. 
+
+A head was launched into the air. It hit a tree, the skull cracking open and spilling brains, and hit the ground with a thick splatter.
+
+The group screamed… I almost vomited. They were screaming in joy, faces pale and expressions static. 
+
+The body in the center was trembling as if to cling onto its last pieces of life. Red coated the suit, dampening the black and dying the gold. It quickly collapsed, knees first hitting the ground before the torso splayed itself out.</span></div></div></div></div><div id=chatlog__message-container-1028841980656111686 class=chatlog__message-container data-message-id=1028841980656111686><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, October 9, 2022 9:30 PM">9:30 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Yuzu and I then made eye contact. They cracked a grin, I couldn’t move. Then, they stomped on the body and pierced the lung of the corpse with their heel.
+
+The group was suddenly buzzing with enthusiasm. I wish I could share the excitement, but… that view was so horrifying. When I came to, I could only see another shadow running in. Someone else was about to die, I know it.
+
+Instead, Binah had detained Yuzu. I guess it broke their bloodlust haze, as Yuzu could only start laughing and sobbing in response. I can’t feel my hands at this point. 
+
+The group looked at Binah and glared daggers at them. They then dispersed, leaving only the three of us and a corpse.
+
+“Hey, Binah…” I murmured.
+“Yeah, uh, sorry.” They responded.
+
+Yuzu growled beneath Binah. I felt bad watching them like that, I can’t imagine the anguish they’re feeling and the rage. Though, I guess it’s none of my business. At this moment, however, It doesn’t hurt to ask if they’ll be fine.
+
+“Will they be okay?”
+
+Binah paused.
+
+They gave it some good thought, I bet.
+
+“Yeah, I’ll make sure they’re fine.”</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 24 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

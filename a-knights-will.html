@@ -1,0 +1,558 @@
+<!DOCTYPE html><html lang=en><head><title>[rp] 🥒 キュー - a-knight’s-will</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/1093324008059052187/1fc2ced94492a047ff281d6529041ece.png?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>[rp] 🥒 キュー</div><div class=preamble__entry>completed RP! / a-knight’s-will</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1196528461490163864 class=chatlog__message-container data-message-id=1196528461490163864><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 1:56 PM"><a href=#chatlog__message-container-1196528461490163864>1/15/2024 1:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The sea’s waves can make one lose their sense of direction.
+
+That is exactly what’s been happening, as Limbus Company continued their voyage out of the Great Lake’s bounds and back to the main part of the city.
+
+Iris stared boredly out of the window of the bus-boat. Her finger traced along the waves aimlessly, while Ryoshu - who she swapped places with briefly - blew thin veils of smoke into the air.
+
+Eventually, Iris stood. 
+
+She took her large weapon by  her side, lugging it up the aisle until she half-leaned down next to the manager. 
+
+“Manager. May I be assigned some work?”
+
+&lt;…? Iris?&gt;
+
+“Just a humble ask. I’d like something to do.”
+
+&lt;Hm. Then…&gt;
+
+Haphazardly placed Christmas decorations were still scattered on the bus-boat. There were garlands, hats placed over sleeping sinners faces, and lights put up well enough to only need adjustment once a week.
+
+&lt;It’s no longer Christmas, I think, so feel free to take down those decorations.&gt;
+
+“Understood,” Iris murmured, standing tall again. She turned around slowly, holding Chevalier by her side. She turned her head ever so slightly. Her next words were simply her choosing her assistant for the day.
+
+Iris gave a brief smile.
+
+“Miss Don Quixote… would you like to assist me in this?”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196532793463816202 class=chatlog__message-container data-message-id=1196532793463816202><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:14 PM"><a href=#chatlog__message-container-1196532793463816202>1/15/2024 2:14 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The small blonde shot up like a rocket.
+
+&quot;Thou chooseth me? Insooth, a fine decision~!&quot;
+
+Immediately she stood right next to Iris, eyes gleaming with wonder and excitement. 
+
+&quot;Truthfully I hath tired of the Christmas ornaments. The shining lights cause difficulty to rest should one choose to take a brief slumber in the working hours...&quot;
+
+&quot;Let us not dally signora! Our quest begins!&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196533970121261057 class=chatlog__message-container data-message-id=1196533970121261057><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:18 PM"><a href=#chatlog__message-container-1196533970121261057>1/15/2024 2:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Her smile only grew just a bit wider. 
+
+“Is that so? You were the one to put them up, yet you grew tired of them… hehe.”
+
+Iris leaned her weapon against the wall, putting her hand to her chin in thought as she devised a plan. 
+
+“Okay, noble one,” she said quietly, tired eyes scanning the bus.
+
+Such a title was donned the moment Iris realized Don looked up to her just as much — if not <em>more</em> than the children of her hometown — and such a title was of high honor.
+
+“…Let’s try this. If you can get those lights and long lines of tinsel down, I’ll handle the rest of it. Sound good?”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196536870629285998 class=chatlog__message-container data-message-id=1196536870629285998><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:30 PM"><a href=#chatlog__message-container-1196536870629285998>1/15/2024 2:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote grew sheepish for a moment.
+
+&quot;I have discovered that the shine of the holiday season... Is less enjoyable when it strikes oneself directly in the eyes.&quot;
+
+Recovering from her brief stumble, she renewed her spirit, 
+
+&quot;Of course! &#39;Tis not an issue Lady Iris! Thou shalt find the task done!&quot;
+
+Without further delay she began to pace around the bus, pulling down strings of lights and tinsel, ocasionally needing to excuse herself to slip past a sinner occupying their seat to retrieve some decorations hanging over the seats.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196538167692628059 class=chatlog__message-container data-message-id=1196538167692628059><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:35 PM"><a href=#chatlog__message-container-1196538167692628059>1/15/2024 2:35 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Is that so…”
+
+Iris walked down the aisle and plucked hats off of heads, occasionally squeezing between rows of seats to carry a decoration on her arm. Almost instantly, the jolly spirit dissipated and things returned to normal. 
+
+“Ishmael? Could you hand me that hat on Heathcliff’s head, please?”
+Before Ishmael could turn around and even retrieve it, Sei’s hand grabbed the tip of the hat and snatched it off of a sleeping Heathcliff’s face.
+
+“Here you go, madam! The oaf won’t even notice.”
+“…”
+
+Iris nodded and took the santa hat into her hands. 
+
+It wasn’t long until she was done.
+
+“Oh, young noble. Do you recall where you left the, er… sack, from which you first brought these? I’d hate to throw them somewhere without a proper place.”
+
+The notion of “throwing” briefly caught Vergilius’ attention, with which Iris gave a small nod as if to say <em>‘not to worry.’</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196539905669595187 class=chatlog__message-container data-message-id=1196539905669595187><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:42 PM"><a href=#chatlog__message-container-1196539905669595187>1/15/2024 2:42 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Of course, &#39;tis in mine bedchambers! It hath resembled the sack that which the Red Sack carried to such a degree, I knew I had to keep it for a cosplay in the future! Come along now Lady Iris, I shall escort thee to it!&quot;
+
+It was hard to see Don Quixote&#39;s face over the bundles of decorations in her arms, but her eyes seemed to still gleam from between the gaps.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196540859496284171 class=chatlog__message-container data-message-id=1196540859496284171><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 2:46 PM"><a href=#chatlog__message-container-1196540859496284171>1/15/2024 2:46 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“Ah—okay.”
+
+Iris gave a brief glance to Faust and a slightly worn grin. She had only seen Don Quixote’s room a handful of times, but compared to the serene white void of Iris’ room, an eyesore would be quite the understatement of it.
+
+But, those cosplays. Iris had overheard echos of it, dragging Heathcliff into her antics and aspiring to make herself in the likeness of the most legendary fixers. She found herself curious — was this a common hobby, or something unique to Don Quixote? 
+
+“Please show me the way, then” she asked politely.
+
+Iris kept her bundle of decor tight to her as she stepped aside for Don Quixote to lead their path.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196551952083976363 class=chatlog__message-container data-message-id=1196551952083976363><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 3:30 PM"><a href=#chatlog__message-container-1196551952083976363>1/15/2024 3:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Follow closely Mademoiselle, let us sally forth!&quot;
+
+Don Quixote happily skipped towards her room, the bulbs of the lights clacking together, she turned her head back slightly to glance at her coworker.
+
+&quot;I grow rather weary of the idyllic nature of the sea... a hero mustn&#39;t rest on their laurels! So it says on page 327 in Sir Siegfried&#39;s autobiography! &#39;Practice makes perfect, and stillness is weakness!&#39; &quot;</span> <span class=chatlog__edited-timestamp title="Monday, January 15, 2024 3:30 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196569927868502047 class=chatlog__message-container data-message-id=1196569927868502047><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 4:41 PM"><a href=#chatlog__message-container-1196569927868502047>1/15/2024 4:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>“You’ve…read the entire thing.”
+
+Iris was stunned. She nodded along to the info, finding herself agreeing — and glad that she never was subject to writing such haughty books.
+
+“His words are truthful — although, you have to remember sometimes that stillness is the perfect moment to plot your next move.”
+
+<em>Autobiographies… there’s not much I could write about. Very little is interesting about life there, and writing about that initial purging would be much too grim — or put me on N Corp’s hitlist.</em>
+
+“…I find the sea nice, though. Even with its eccentricities, there’s nothing like it. It beats a gross dungeon or the dreary backstreets.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196573874519806032 class=chatlog__message-container data-message-id=1196573874519806032><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 4:57 PM"><a href=#chatlog__message-container-1196573874519806032>1/15/2024 4:57 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Verily, the Great Lake is a change of pace from the usual sights of the city... but I do wish to avail Sir Yi Sang of his troubles... &#39;Tis a harrowing job for whomever is assigned to cleanse it...&quot; 
+
+Mentioning the bucket, she shuddered briefly in disgust.
+
+&quot;Halt!&quot; She announced, stopping in front of her door. &quot;We have arrived, hold fast for a moment Madame...&quot;
+
+She opened the door to her room with a dramatic flourish and bow,  and ushered Iris in.
+
+&quot;Ladies first, Se&#241;orita.&quot;
+
+The inside of the room, a reflection of the fathoms of her ego, was a bright and colorful room adorned with signs  and iconography of notable fixers. There, beneath a mountain of figures and other toys lied the red sack, temporarily being used to hold memorabilia instead of presents or decorations.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196579066774564955 class=chatlog__message-container data-message-id=1196579066774564955><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 5:18 PM"><a href=#chatlog__message-container-1196579066774564955>1/15/2024 5:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Ah, I guess we never took into account health-related predicaments--&quot;
+
+As Don Quixote ushered her in, Iris couldn&#39;t help but stifle a little giggle. &quot;Oh <em>thank</em> you, miss, how polite!&quot; 
+
+Upon entering the room, Iris&#39; halo spun just a bit faster, pulsing in a mild disccomfort. She stepped aside to give the other girl a chance to make the sack ready for the decorum, eyes scanning all of the posters and memorabilia.
+
+Her eyes landed on two posters -- one of the Ivory Moon, seemingly in pristine-condition minus a golden scribble of a signature, and a smaller sheet of paper that was half-ripped, with a somewhat crude drawing of a younger Iris scribbled upon it.
+
+She gave a half-smile.
+
+&quot;...ah? Hey, where&#39;d you get that poster?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196583597444964362 class=chatlog__message-container data-message-id=1196583597444964362><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 5:36 PM"><a href=#chatlog__message-container-1196583597444964362>1/15/2024 5:36 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;T&#39;was handcrafted! You see, I had always desired merchandise of The Holy Knight! But it oft was out of stock! And those villainous scalpers... whom resell it for exorbitant prices, made it nigh impossible to acquire it. So I settled to create my own poster of thou, I do hope that you find it to your liking,&quot;
+
+Don Quixote left Iris to gaze at the poster for a moment, as she went to the far side of the room. She grabbed the red sack, flipping it upside down and emptying it of it&#39;s contents. There was a generous clattering as dozens of figurines spilled out onto the carpets and concrete.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196585158053208124 class=chatlog__message-container data-message-id=1196585158053208124><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 5:42 PM"><a href=#chatlog__message-container-1196585158053208124>1/15/2024 5:42 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;I see... it looks very nice!&quot;
+
+<em>Well, THAT&#39;S an easy gift for a birthday or some holiday. Mmh. Too bad Christmas is not for a while.</em>
+
+As the clattering started, Iris&#39; head shot towards the figurines spilled onto the floor, nearly jumping from the sudden sound. <em>That&#39;s a lot of merchandise,</em> she thought, soon walking over with all of the decorations in hand. 
+
+<em>...How does she even get any of this stuff -- and how the hell did she get Noa to sign that poster...? would it be rude to ask? I-I mean, it&#39;s a poster of my friend...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196586566336905296 class=chatlog__message-container data-message-id=1196586566336905296><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 5:47 PM"><a href=#chatlog__message-container-1196586566336905296>1/15/2024 5:47 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote held the sack open, it already having her share of decorations put inside. &quot;Do mind your step Lady Iris! It would be of great displeasure if you were to mistakenly crush The Vermillion Wheels &#39;Dine and Dasher!&#39; &quot; 
+
+Her gaze was cast on the legendary vehicle of a color fixer, whom delivered shipments of food to those displaced by the collapse of L-Corp&#39;s wing many years ago. Record says that the fixer detests his title, and only wishes to help without being swathed by fans.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196588661618253844 class=chatlog__message-container data-message-id=1196588661618253844><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 5:56 PM"><a href=#chatlog__message-container-1196588661618253844>1/15/2024 5:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;I--I see...! Sorry, I&#39;ll watch my step.&quot;
+
+There were <em>so many</em> things. It was a marvel how Don Quixote could recognize them all and make sense of them. Many familiar faces, some seen only on Fixers Monthly and others regular acquaintances. 
+
+Among the piles was a small articulated figurine of Iris, fit with her armor and everything. The sword was not actively in her hand, but she knew that it likely was placed in the pile -- after all, Chevalier was hard to miss.
+
+&quot;Mm. You got at least a figurine of me... nice catch?&quot;
+
+Iris continued to look at the figures as she placed the remaining decorations into the sack, discerning as much as she could.
+
+<em>...Is that Merlot in there? I thought they stopped making figures of her years ago, considering how old and out of fashion she is by now. Although, she&#39;d hate to hear me make such a comment.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196592545174659092 class=chatlog__message-container data-message-id=1196592545174659092><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 6:11 PM"><a href=#chatlog__message-container-1196592545174659092>1/15/2024 6:11 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Of course! Thou would be mistaken if thine believed I did not treasure each and every fixer mine gaze stumbles upon! Such heroics ought to be remembered. Now then, Lady Iris. It appears we have completed the task Manager Esquire has assigned us, are there any other ventures we must tackle?&quot;
+
+Don Quixote beamed at Iris, excited at the prospect of continued work with her.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196594266617688095 class=chatlog__message-container data-message-id=1196594266617688095><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Monday, January 15, 2024 6:18 PM"><a href=#chatlog__message-container-1196594266617688095>1/15/2024 6:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;I&#39;d ...&quot;
+
+She paused. Dante was rather relaxed with giving orders as they traveled, as there wasn&#39;t much else to do than the usual luxcavations or mirror dungeons -- that would end up being their likely work, especially as kitchen duty was always handled and there were few communal areas to clean to make new work.
+
+&quot;...I&#39;d have to ask, but I&#39;m sure there&#39;s work to do,&quot; she half-bluffed.
+
+Iris smiled to Don Quixote, admiring her enthusiasm.
+
+<em>It doesn&#39;t look like we can seek our usual compatriots for work, either, unless they somehow reach to the Great Lake... and Don Quixote is not the best fit for detective work, to see what&#39;s going on with any new backdoor volatilities.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196699475218022410 class=chatlog__message-container data-message-id=1196699475218022410><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Tuesday, January 16, 2024 1:16 AM"><a href=#chatlog__message-container-1196699475218022410>1/16/2024 1:16 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Wonderful! Then let us hurry, it would be unbecoming of fixers such as ourselves to waste time!&quot;
+
+Don Quixote neglected to mention the precise grade of her being a fixer, despite being one of the few sinners on the bus with a Fixer Identification Number. She hurried to the door, leaving a wake of figurines about the floor, and repeated her dramatic gesture.
+
+&quot;Shall we, Lady Iris?&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1196717401262280764 class=chatlog__message-container data-message-id=1196717401262280764><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, January 16, 2024 2:27 AM"><a href=#chatlog__message-container-1196717401262280764>1/16/2024 2:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;Oh!&quot;
+
+Iris stepped forward and walked back out into the hallway, nearly pressing herself flat against the other side of the hallway. &quot;Off we go,&quot; She said in a monotone voice.
+
+Iris pushed forward and marched her way back up to the front of the bus, bending down again towards Dante with a smile on her face.
+
+&quot;Manager... I request more work.&quot;
+
+&lt;Huh? More?&gt;
+
+&quot;Yes... erm-- let me adjust my ask. <em>We</em> request more work.&quot;
+
+&lt;...ah.&gt;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197385821246992424 class=chatlog__message-container data-message-id=1197385821246992424><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 10:43 PM"><a href=#chatlog__message-container-1197385821246992424>1/17/2024 10:43 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>As Iris said &quot;We&quot;, Don Quixote peered out from behind her. 
+
+&quot;Manager Esquire! The silence is dreadful, doth thou not know how terrible the stillness has been?&quot; As she spoke Don Quixote slowly walked forward until she stood just before Dante. 
+
+&quot;We shalt take on any duty you prescribe us!&quot; She posed triumphantly, the various buttons emblazoned with the icons of fixers rattling with her swift motion. 
+
+&quot;A-as long as thou spares us the tribulation of cleaning the bucket...&quot; She swiftly added as the sound of Yi Sang emptying the contents of his stomach rang out not too far from them.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197390217548677171 class=chatlog__message-container data-message-id=1197390217548677171><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 11:01 PM"><a href=#chatlog__message-container-1197390217548677171>1/17/2024 11:01 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Keeping a stiff grin as Don Quixote gave her proposal, Iris nodded along. Anything would be fine to keep them from dying of boredom -- even the serenity of her own room grew ever so slightly duller as they lulled in progress.
+
+&quot;...what she said,&quot; she tacked on at the end.
+
+Dante stared at the two of them -- or whatever the closest thing to staring was with a clock-head -- and nodded in thought. Iris held her hands behind her back, halo spinning slowly in anticipation.
+
+&lt;I guess I could...&gt;
+
+They wanted to seek Vergilius&#39; advice for a moment. But, as the Executive Manager, Dante called the shots. They paused as they pondered what to task the two sinners with.
+
+&lt;Hm. We can do a Luxcavation. If you&#39;d like, you can take a couple of other sinners with you, or it can just be us.&gt;
+
+Iris looked over at Don Quixote, a small smile on her face as if to say, <em>&#39;I think we can handle this ourselves.&#39;</em></span> <span class=chatlog__edited-timestamp title="Wednesday, January 17, 2024 11:22 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197394537472086046 class=chatlog__message-container data-message-id=1197394537472086046><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 11:18 PM"><a href=#chatlog__message-container-1197394537472086046>1/17/2024 11:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote&#39;s shining eyes met Iris, as she cried out. &quot;Our comrades deserve their rest! Fear not Manager Esquire, for a task like this shalt be done as swift as lightning!&quot; 
+
+
+In the face of her passion, Dante could only show much resistance. If he could sigh he would, but instead he just slumped his shoulders in defeat.
+
+&lt;If you insist... Please be mindful that I&#39;ll be feeling any pain you experience after this is over, so do me a favor and don&#39;t be reckless.&gt;
+
+Dante slid in the two enkephalin modules, as somewhere behind the door a deep humming roared. It only goes to show the potential of Mephistopheles, as the engine is capable of accessing fragments in time, once completed providing combat experience condensed into tickets or lines of the mysterious thread.
+
+When the fog cleared and the door burst open, they were deposited into the middle of a forest, immediately met by murderous gazes behind helmets.
+
+&lt;It looks like the door lead us right back to N-Corp territory...&gt; 
+
+Don Quixote brandished Sue&#241;o Imposible tightly and shouted, alerting any Inquisitors whom had not taken notice of them. 
+
+&quot;Heed me villains! Thou shalt face justice through steel!&quot; 
+
+Without any hesitation she charged straight into the heat of battle, leaving behind The Holy Knight and her Manager. 
+
+&lt;...It&#39;s really not fair that I don&#39;t get to have any painkillers.&gt;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197396263885348904 class=chatlog__message-container data-message-id=1197396263885348904><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 11:25 PM"><a href=#chatlog__message-container-1197396263885348904>1/17/2024 11:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Iris, with Chevalier by her side, walked on and kept her normal regality. Although, she found some entertainment in Don Quixote&#39;s shimmering persona.
+
+As the door opened, though, her heart sank. <em>...This? Are you kidding, Manager?</em>
+
+For once, she felt glad that no one could read her mind. However, she awaited her order, until she noticed her partner already dashing ahead into the combat.
+
+&quot;Sir, wait--&quot;
+
+Too late. 
+
+Iris bowed her head, nodding towards Dante&#39;s way -- a sign that she already knew those first orders, not even needing them to be said to her. 
+
+<em>I don&#39;t think I&#39;ll ever get tired of doing this. The more of you I take down... the closer I get to her...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197398771735216128 class=chatlog__message-container data-message-id=1197398771735216128><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 11:35 PM"><a href=#chatlog__message-container-1197398771735216128>1/17/2024 11:35 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The cries of the Inquisitors charging forth filled the air, alongside the triumphant laughter of Don Quixote. Despite her overzealous nature, every motion carried unexpected strength and grace.  
+
+They had fought N Corp. Inqusitors countless times by now, that even their words had gotten predictable. 
+
+&quot;Halt! Under the authority--&quot;
+
+The Inquisitor was silenced by a lance driven through his head, Don Quixote completing his sentence in an almost mocking tone. 
+
+&quot;Of The One Who Grips!&quot;
+
+After narrowly dodging a nail to her chest, she called to Iris. 
+
+&quot;My companion! Let us drive each other towards greatness. Whomever has slain the most villains at the end of our conquest shalt receive a reward!&quot; 
+
+Even as she ducked and stabbed through the endless tides of fanatics, Don could be identified by her hair whose color was as brilliant as the stars in the skies.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197401928766861414 class=chatlog__message-container data-message-id=1197401928766861414><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, January 17, 2024 11:47 PM"><a href=#chatlog__message-container-1197401928766861414>1/17/2024 11:47 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;The most?!&quot;
+
+Iris sighed, closing her eyes as she nearly aimlessly slayed the inquisitor that tried to attack her. Her frozen heart pounded with a fervor rarely seen in her, breath steady.
+
+&quot;...Fine.&quot;
+
+Dante was nearly helpless in watching these two fight. Iris, by now, simply carried out orders she already knew the words to. Her halo pulsed with each sound of flesh churning, bones cracking, or metal splitting from itself. 
+
+<em>Twelve dozen of you match one of her. I could kil that many and more -- and barely break a sweat...</em>
+
+Iris did not open her eyes once. She fought with a heaviness to her in the way Chevalier was swung, though never breaking from her precise train of thought.
+
+&quot;...&quot;
+
+<em>It&#39;s ,,, okay if she wins. As long as she does her best.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197406776300159017 class=chatlog__message-container data-message-id=1197406776300159017><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 12:07 AM"><a href=#chatlog__message-container-1197406776300159017>1/18/2024 12:07 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>With the challenge accepted, Don Quixote&#39;s valour heightened. She ran and charged through, skewering multiple at a time. 
+
+<em>I shalt not make it a simple task for Lady Iris! A Fixer of her background... how I have yearned for such an opponent!</em>
+
+The nature of Don Quixote&#39;s weapon made it troublesome to deal with enemies attacking her in multiple angles, requiring her to finesse around various hammers aiming to cave her skull as she dipped in and out with her lance. The clashing of steel and roars of Inquisitors rose as reinforcements arrived, before quieting as they fell in battle. Slowly yet surely the final few Inquisitors remained from the impromptu massacre of the fanatics. 
+
+On some level, Don Quixote respected their devotion and unshakable resolve, but a villain is a villain no matter what.
+
+&quot;Let us finish this in time for to enjoy a meal meal with our comrades. Manager Esquire! Prithee, permit me the usage of an E.G.O! The one of the abnormality that resembled a decapitated fish with the bloated stomach!&quot;
+
+Stumped, Dante turned his head towards Iris briefly. He hadn&#39;t any eyes to make an expression, nor any words to say. But his gaze seemed to imply:
+
+<em>Please take care of this fast... I don&#39;t want to indulge her and risk a corrosion...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197424501873459332 class=chatlog__message-container data-message-id=1197424501873459332><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 1:17 AM"><a href=#chatlog__message-container-1197424501873459332>1/18/2024 1:17 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Iris made no word, but she felt Dante&#39;s gaze pierce the back of her skull.
+
+<em>That&#39;s the OK. Sorry, Sir.</em>
+
+Iris&#39; eyes opened briefly. She dashed forward, her halo glowing brightly above her head before a matching cerulean streak swiped across the remaining three Inquisitors, a move that would be quite familiar to any fan of the legendary Red Mist. Although only a mere imitation of it added on with the Holy Knight&#39;s own (now weakened) flair, the move was still impressive, pulled off with the slightest waver of the hand. 
+
+Iris, when finishing her move, spun on her heel and turned to face Dante. Her expression was visibly distressed, eyes sunken in and devoid of their usual drowsiness -- only now replaced with a ghastly awake look.
+
+&quot;...&quot;
+
+&quot;That...should... be clear.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197427800357994496 class=chatlog__message-container data-message-id=1197427800357994496><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 1:30 AM"><a href=#chatlog__message-container-1197427800357994496>1/18/2024 1:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote was left with her jaw dropped in awe.
+
+&quot;Verily! Such a cleave... thou hast left me stricken! I must know... I must learn how!&quot;
+
+Don Quixote barraged her with questions, about how she learned to preform the maneuver, how many kills she had gotten, and what was next. Her voice broke the silence of the forest, until she had finally made her way next to Iris. 
+
+Her babbling stopped immediately when she saw the expression borne on Iris&#39;s face.
+
+With a sudden change of demeanor, she spoke to Dante directly. &quot;...Manager Esquire. Let us call this operation successful and retreat.&quot;
+
+The both of them stared on at the Clock that was the head of their Manager, waiting for their order.
+
+&lt;Well done. Minimal damage as well it seems... Lets go back.&gt; 
+
+Unnerved by the stares of the two knights at his command, even his attempt to compliment their performance was rather meager. He instead wordlessly lead them back to the door, thanking them for their duties once they returned to the bus and swiftly departing.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197430134400098336 class=chatlog__message-container data-message-id=1197430134400098336><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 1:39 AM"><a href=#chatlog__message-container-1197430134400098336>1/18/2024 1:39 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The knight nodded, dragging her weapon behind her as she quietly walked through the door back onto the bus. She didn&#39;t speak much, but when they were back in the corridor in which the sinners rooms were situated, Iris stopped suddenly.
+
+&quot;I&#39;m going to take a few minutes in my room,&quot; was all she said with a quiet murmur. 
+
+&quot;...Impressive work, noble one.&quot; She said with a faint grin, although her eyes continued to deceive her expression.
+
+Opening the door, a white haze leaked into the hallway until she quickly slipped in, shutting the door behind her without another sound.
+
+A slight hint of red could be seen in the crack instead of the usual blues of the room.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197441149703553035 class=chatlog__message-container data-message-id=1197441149703553035><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 2:23 AM"><a href=#chatlog__message-container-1197441149703553035>1/18/2024 2:23 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote watched her retreat into her room. She felt conflicted. Part of her wanted to directly approach Iris to comfort her, another felt that Faust should be brought into the debacle. 
+
+&quot;Y-You <em>hrk</em> look like you&#39;ve seen a spirit...&quot; A queasy voice spoke out. Yi Sang was shambling to his room, bucket in tow. &quot;I&#39;m afraid I cannot speak for l-long... but I believe that you may be troubled. I-If I may lend an ear to your yarn... <em>Ugh...</em>&quot;
+
+A somewhat long story took even longer with repeated stops to accommodate Yi Sang&#39;s gagging, but the entire situation was unraveled to him. 
+
+&quot;I-I&#39;m afraid... I&#39;m not of much help... in my current state. But you&#39;re of a kind heart... I believe you are more capable than you realize... <em>hurk</em>&quot;
+
+Yi Sang held his the bucket in his face with one hand, sluggishly waving to Don with the other as he went to the reprieve of his room.
+
+<em>Sir Yi Sang truly is a noble soul... albeit weak stomached...</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197443727573123194 class=chatlog__message-container data-message-id=1197443727573123194><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 2:33 AM"><a href=#chatlog__message-container-1197443727573123194>1/18/2024 2:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Instead of the usual cross in the center of the pools of water, the entire room’s view centered upon a bloodied red throne. 
+
+Thorny vines wrapped around its legs, roses forcing themselves out in an uncomfortable display. A book laid on the center of the throne, as if tempting Iris and reminding her of what plagued her.
+
+<em>I need to be strong.</em>
+
+As her eyes trailed away from the throne, the glassy streams of blood forming into pools and pierced by the swords that once hung from the endless ceiling only made Iris feel sick.
+
+<em>The worst feature of this place is the rooms reacting to our mental state.</em>
+
+The halo blipped and buzzed. It spun wildly when Iris got more agitated seeing the image of a bygone age, reminded of someone long gone. 
+
+<em>…Seeing them reminds me of what happened, what I need to do.</em>
+
+<em>I feel guilty for letting go of myself like that in front of Don Quixote, though.</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197445335908364348 class=chatlog__message-container data-message-id=1197445335908364348><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 2:40 AM"><a href=#chatlog__message-container-1197445335908364348>1/18/2024 2:40 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote&#39;s knuckles rapped on the door, hoping Iris would give her entry. Due to the nature of the doors of Mephistopheles, they will always lead to the same place depending on whom opened them. There&#39;s no way to get into Iris&#39;s room, without Iris letting you in.
+
+&quot;Lady Iris! I don&#39;t know if thou hears mine call, but I beg thee for entry!&quot;
+
+<em>It is the duty of a knight to ensure their companions are in health!</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197447138880262255 class=chatlog__message-container data-message-id=1197447138880262255><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 2:47 AM"><a href=#chatlog__message-container-1197447138880262255>1/18/2024 2:47 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a few moments, Iris turned around and tried her best to compose herself before walking to the door, slowly opening it for Don Quixote. There was no use trying to hide, but Iris did not want to serve such a cold lesson already.
+
+The door opened to the same white haze. The unmistakable red was quite visible from this angle, almost turning the room into a faint pink.
+
+“Do enter,” she said, voice as soft as ever — though laced with a slightly labored raspiness.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197451166410354698 class=chatlog__message-container data-message-id=1197451166410354698><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 3:03 AM"><a href=#chatlog__message-container-1197451166410354698>1/18/2024 3:03 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Immediately, Don Quixote slipped in and closed the door behind her.
+
+&quot;Um. Signora Iris. If I may...&quot; She approached slowly. &quot;I understand our latest quest has sprung up unsavory pasts. I wish only to provide a shoulder for a fellow knight.&quot;
+
+Perhaps slightly overstepping her boundaries, Don Quixote pulled her into a tight hug, pulling Iris&#39;s head into the crook of her neck, gently running her hand over the top of her head. 
+
+&quot; &#39;Tis not unsightly to cry... but &#39;tis to deny yourself your sorrow.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197454952059117638 class=chatlog__message-container data-message-id=1197454952059117638><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 3:18 AM"><a href=#chatlog__message-container-1197454952059117638>1/18/2024 3:18 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Iris was shocked at the sudden hug, slowly but surely reciprocating the hug from Don Quixote. 
+
+“. . . was i. . . cry. .ing?”
+
+The question was posed with a hint of confusion until Iris reached a hand up to her nose, feeling the warmth.
+
+<em>I guess so, and I never noticed.</em> 
+
+“…” 
+
+She immediately wanted to put on a front. To ignore the blood spilling on the floor, the throne of roses waiting behind her, even the occasional mad cackling that seeps through the cracks of Iris’ mind. 
+
+So, she smiled and feigned her stability. 
+
+<em>How do I pose this to her?</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197692855301439680 class=chatlog__message-container data-message-id=1197692855301439680><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 7:03 PM"><a href=#chatlog__message-container-1197692855301439680>1/18/2024 7:03 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote  dropped her smile and furrowed her brow.
+
+&quot;...&#39;Thou musn&#39;t repress thyself. &#39;Tis through that end that we destroy ourselves. I... if I may be so bold, Mademoiselle. Thou needn&#39;t smile. If thou must cry, they may cry. Even if it fills every cranny of this chamber with wailing. Let me be a knight most steadfast, and support thee in thy hour of need.&quot;
+
+Don Quixote glanced at the current state of the room, which  looked far from the typical gentleness of her room.
+
+&quot;Thine quarters betray thy heart. It is obvious, even to a starry eyed fool such as myself.&quot;</span> <span class=chatlog__edited-timestamp title="Thursday, January 18, 2024 7:03 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1197700308785176586 class=chatlog__message-container data-message-id=1197700308785176586><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, January 18, 2024 7:33 PM"><a href=#chatlog__message-container-1197700308785176586>1/18/2024 7:33 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>By now, the smile turned somewhat genuine. Iris chuckled, resting a hand atop Don Quixote’s head. 
+
+“Please, it’s okay.”
+
+Iris’ halo slowed itself down and dulled, appearing nearly transparent and casting very little light. 
+
+For a brief moment, the pools of blood leaked blue ever so slightly. 
+
+“Fixers like me need not to cry over a singular villain we strive to take down. I’ll waste too much time and energy over tears that will mean nothing by the time I get there —“
+
+As Don Quixote’s gaze changed, Iris placed a hand on the other sinner’s cheek to try and redirect her gaze. 
+
+“Hey, hey, don’t— don’t worry. Just.. the normal fluctuation of one’s room, yeah?”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1198198227502116864 class=chatlog__message-container data-message-id=1198198227502116864><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Saturday, January 20, 2024 4:31 AM"><a href=#chatlog__message-container-1198198227502116864>1/20/2024 4:31 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote shook her head.
+
+&quot;Nay. Se&#241;orita, prithee do not stray me from what I&#39;ve already beheld. It is evident that this villain has grasped your heart tightly, allowing their vices to tear into your bosom. Does thou desire to take a seat? Or rest thine weary head? My lap is open for thou.&quot;
+ 
+Don Quixote gently tapped her thighs, to indicate that at any moment they could be a pillow for Iris.
+
+&quot;Or, we may continue this standing. I wish for thy comfort, as once we are settled, I request the honor to recount a certain tale to you.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1198335386993299566 class=chatlog__message-container data-message-id=1198335386993299566><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Saturday, January 20, 2024 1:37 PM"><a href=#chatlog__message-container-1198335386993299566>1/20/2024 1:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote’s insistence would have irritated Iris had she not been so fond of the lesser knight. 
+
+She nodded slowly, taking her hand off of the other sinner’s cheek and adjusting one of the silver rings on her fingers anxiously. 
+
+“…” 
+
+“…Go to that throne over there. I’ll rest beside you.”
+
+With undeniability, she was bothered by seeing the state of her room this way. Iris was reminded of what was lost, and what she needed to find.
+
+As she walked Don Quixote over to that throne, Iris picked up and held the book. She could open it, but every time she tried, it was blank. Surrendering it to Celia’s library — or even Victor’s — was unproductive, as it’d eventually return.
+
+So, she set it down next to the chair, discarding its influence.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1204710608474345502 class=chatlog__message-container data-message-id=1204710608474345502><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, February 7, 2024 3:49 AM"><a href=#chatlog__message-container-1204710608474345502>2/7/2024 3:49 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Just as she was commanded, she marched on to the throne. 
+
+It was awfully quiet.
+
+Too much for her tastes, so to fill the sound of the room with something other than their footfalls, Don Quixote hummed to the tune of the music that happened to be playing in their brief visit of a club in Marlin Port. Not that it was a noteworthy type of track, but it happened to be the type that got stuck in your head.
+
+When they finally stood before the throne, Don Quixote gestured towards the seat.
+
+&quot;I implore thee to be seated Lady Iris! Thou deserveth the respite. From then on, we may continue to converse, t&#39;was a day full of hard labor. Even a soul as noble as yours is not above the need for moments of leisure.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1204819182705844315 class=chatlog__message-container data-message-id=1204819182705844315><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, February 7, 2024 11:01 AM"><a href=#chatlog__message-container-1204819182705844315>2/7/2024 11:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>At the sound of the request, Iris’ eyebrow twitched. 
+
+“A—mm. O…kay.”
+
+Iris turned around, forcing her eyes closed as she carefully sat on the throne. Knowing its symbolism unsettled her already — and knowing that the one it belonged to still ran free, attempting to erase everything that she saw as unfit disturbed Iris even more.
+
+She shook her head after settling in, opening her eyes slowly to bring herself back to reality.
+
+“Okay, Sir Quixote.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1204824936200409178 class=chatlog__message-container data-message-id=1204824936200409178><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, February 7, 2024 11:24 AM"><a href=#chatlog__message-container-1204824936200409178>2/7/2024 11:24 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Once Iris was fully seated, Don Quixote stood right in front of her. She smiled gently at Iris, softly patting her on the shoulder.
+
+&quot;Mhm... if the seat itself is decidedly unsavory, I still offer my lap. Thou needeth only to speak and it shall be done.&quot;
+
+For now, Don Quixote continued her comforting touch. She didn&#39;t wish to force conversation out of Iris, instead delicately brushing her hand over her shoulder.</span> <span class=chatlog__edited-timestamp title="Wednesday, February 7, 2024 11:27 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1204827720090001459 class=chatlog__message-container data-message-id=1204827720090001459><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, February 7, 2024 11:35 AM"><a href=#chatlog__message-container-1204827720090001459>2/7/2024 11:35 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a few moments, it felt like thorny vines started to wrap themselves around Iris. She quickly stood up, shaking her head.
+
+“I can’t—“
+
+She turned her head, halo spinning wildly, looking at Don Quixote as if to signal she needed help and wanted her to sit first.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1204830593620381818 class=chatlog__message-container data-message-id=1204830593620381818><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, February 7, 2024 11:46 AM"><a href=#chatlog__message-container-1204830593620381818>2/7/2024 11:46 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote nodded. She pat her on the back, now unable to reach her shoulders while she was standing, and sat down in the seat first.
+
+There was a strange sensation as she sat down. Not that there was anything wrong with the seat itself, but it felt vaguely cold and hot at the same time. As if it flickered between a raging flame and a bone-chilling frost that danced on the surface of the skin, that you could only barely feel if you focused on it.
+
+&quot;I needn&#39;t more precedent. I understand. Come signora, lounge with me, if I may be so bold to request thine company.&quot;
+
+Don Quixote kept her arms at her side, leaving her lap open for Iris.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1205016484548579389 class=chatlog__message-container data-message-id=1205016484548579389><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, February 8, 2024 12:05 AM"><a href=#chatlog__message-container-1205016484548579389>2/8/2024 12:05 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Iris’ brow twitched at the sight of the offer — although it’d keep her from directly touching the chair, but something was silly about sitting on Don’s lap. 
+
+However, she obliged.
+
+Taking the seat was a gentle matter. She lowered herself with hesitation, but Iris seemed at ease when she was settled. 
+
+She turned to Don Quixote with a still expression.
+
+“That’s not as bad. Thank you.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1205284613086515250 class=chatlog__message-container data-message-id=1205284613086515250><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, February 8, 2024 5:50 PM"><a href=#chatlog__message-container-1205284613086515250>2/8/2024 5:50 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>With Iris on her lap, Don Quixote wraps her arms around her. The maneuver both done to add some extra comfort, and to prevent her from slipping off the smaller knight&#39;s frame. 
+
+From an outsider perspective, one would be unable to see her behind Iris, and the Holy Knight would appear to have suddenly sprouted an extra pair of legs.
+
+&quot;&#39;Tis my pleasure to aid thee, Lady Iris. Now, you need not spare me a thought. If thou wishes to continue to mourn thine past, I implore there to carry on.”</span> <span class=chatlog__edited-timestamp title="Monday, February 12, 2024 3:52 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207166421931397231 class=chatlog__message-container data-message-id=1207166421931397231><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Tuesday, February 13, 2024 10:28 PM"><a href=#chatlog__message-container-1207166421931397231>2/13/2024 10:28 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Iris froze when Don’s arms wrapped around her, but after a few moments her hand rested upon the fellow knight’s arm. 
+
+“…”
+
+“Mmm- actually, tell me a story. I’m sure you have a lot of great ones,” she said quietly. 
+
+She interlocked her ankles, eyes tracing the edges of the chair they sat upon, its crimson edges looked hazy, as if fading into a fervent flame. 
+
+“…”
+
+“If you don’t mind, of course.”</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207197933834080289 class=chatlog__message-container data-message-id=1207197933834080289><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Wednesday, February 14, 2024 12:33 AM"><a href=#chatlog__message-container-1207197933834080289>2/14/2024 12:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;A story? Of course... I know many tales from mine years. I hast even written some of my own! &#39;Twas one of mine humble eight-hundred-and-sixty-three old dreams to be a master of the pen in equal measure to my armaments!&quot;
+
+Don Quixote held her breath for a moment, as she contemplated the precise story to tell her. 
+
+<em>Nay, too gory... Too racy... Too sorrowful... Huzzah!</em>
+
+Breaking her pause, she tightened her hug briefly. 
+
+&quot;Very well then. I shall provide thee a narrative I often come to in my lowest. Perhaps it shall be well for thee as well? Unless thou has a particular choice on the type ye desire to hear.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207199628483764255 class=chatlog__message-container data-message-id=1207199628483764255><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Wednesday, February 14, 2024 12:40 AM"><a href=#chatlog__message-container-1207199628483764255>2/14/2024 12:40 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&quot;eight-hundred-and-sixty-three... that&#39;s a lot of dreams, Sir.&quot;
+
+As Don Quixote posed her offer, Iris&#39; gaze returned to their arms and legs. She blinked, then turned her head slightly.
+
+The distant crystalline sounds from her halo got just a bit louder. 
+
+&quot;...No, I have no preference. Just tell me your favorite.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207588836998389781 class=chatlog__message-container data-message-id=1207588836998389781><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, February 15, 2024 2:26 AM"><a href=#chatlog__message-container-1207588836998389781>2/15/2024 2:26 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote smiled in response, before defending her countless aspirations.
+
+&quot;Even if after I had dreamt all my dreams, and must leave a count unfulfilled, It would be nice to contemplate them and say that at least I had dreamt them. At least I pondered it. At least I tried.&quot;
+
+&quot;Without further dally... Ahem.&quot;
+
+Don Quixote dramatically cleared her throat, before beginning her tale. 
+
+&quot;I tell thee a tale from many years ago, yon. I am doubtless this shall be the first time thine has heard this story. There once was a young lady of no importance. She was nineteen years of age, only just becoming an adult as the sun rose that day. She had lived a life of struggle and sorrow, as many had in the backstreets.&quot;
+
+As the story dragged on, Don Quixote grew more lively in her speech and mannerisms.
+
+&quot;The location of ones next meal was uncertain at all times, brutes stalked every corner, and thou must perish the thought of peace and quiet. The lady had traveled far in hopes of opportunity, but longed to return home. She had spent much time being frugal, attempting to acquire enough funding to board a Warp Train to S. Corp. The price was extraordinary! Especially in District 23, the heart and origin of the Warp Trains.&quot;
+
+She shuddered briefly at the mention of the Warp Trains, now disillusioned with the truth.
+
+&quot;But finally, she had scraped together the finances. All one required was to bring her coinage to the station to accrue the ticket. But in this evening, there was danger afoot. A group of villains attempted to steal the lady&#39;s hard-earned wealth! She fled, but found herself cornered ultimately.&quot;
+
+Here, Don Quixote&#39;s voice grew far more grim.
+
+&quot;A group of four, all brandishing weapons. The young lady cried out, knowing her final moments drew nearer as they approached.&quot;
+
+But just as suddenly as her voice dropped, it grew back in passion.
+
+&quot;And just as one was to deliver a fatal blow, the clashing of metal rang out in the silent streets. The knave hadn&#39;t the moment to cry out before they fell into two pieces! Looks of horror were etched permanently into the countenance of the remaining few, as they were all split across and turned into a crimson haze. The lady had not known if this individual was merely her new executor or savior, until she had turn to face her. Despite the darkness of the night, her outfit blending into the shadows, her striking red hair stood out. She wielded a blade larger than the young lady herself, adorned with eyes and teeth, pulsing as if it lived for the thrill of bloodshed. The Red Mist herself, in all of her glory! She spoke few words, admonishing her for her carelessness, before leaving just as suddenly as she arrived.&quot;
+
+While describing the Color Fixer, Don Quixote seemed to have a hard time staying still, making a number of hand motions and expressions. 
+
+&quot;To someone of such renown as the Red Mist, this encounter may have meant nothing. But for the young lady, &#39;twas metamorphic. She no longer believed her future lay in her homeland. But instead, to be a Color Fixer herself. To be a savior of the downtrodden! A gallant knight, and a valiant hero for now and eternity!&quot;
+
+Don Quixote needed to pause for a moment to take a few breaths, her energetic tirade emptying her lungs.
+
+&quot;And thusly ends our tale. None knoweth now what hath become of our young maiden. Hap she has perished, or mayhap still seeking to follow the footsteps of her guiding light.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207592827559747604 class=chatlog__message-container data-message-id=1207592827559747604><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, February 15, 2024 2:42 AM"><a href=#chatlog__message-container-1207592827559747604>2/15/2024 2:42 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>As Don Quixote relayed the story, Iris listened intently — as her booming voice was right in her ear with their proximity. 
+
+“…”
+
+Part of her felt she knew where it’d be leading, but obliged to listen either way. A smile grew on Iris’ face once again. 
+
+<em>Right, those WARP trains are expensive. Even I didn’t quite have the funds to use them often.</em> 
+
+She made the appropriate reactions, though muted by her drowsy behavior. Little oohs and ahhs in wonder.
+
+Over time, the room subtly shift. Some blades lodged into the ground faded away, pools of blood turned a soft lavender before returning to their normal state of azure. Even the haze of the throne they sat on faded slightly, though not fully changing itself. 
+
+“Ah. I … I hope that the young maiden is following her dreams. Not everyone gets to meet someone as grand as the Red Mist.”
+
+She almost wanted to admit she wanted to meet the Red Mist herself. The world of fixers was so wide, she found herself lucky to be friends with a current color, by sake of them being two of a handful survivors of a tragedy.
+
+But, would Don know that fact? Only if she dug into it, or waited until it was Iris’ turn to resonate with her golden bough.
+
+For now, Iris kept a small smile on her face, and the state of her room seemed to slowly reflect her changing mental stage.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207899657930547213 class=chatlog__message-container data-message-id=1207899657930547213><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/249280571635662849/ec05a00d006d512f579bb17840f6c154.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(233,30,99) title=ba_star_d data-user-id=249280571635662849>Chili</span> <span class=chatlog__timestamp title="Thursday, February 15, 2024 11:02 PM"><a href=#chatlog__message-container-1207899657930547213>2/15/2024 11:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Don Quixote chose not to linger on the details and mention the changing of her room, opting to give her another tight hug from behind.
+
+&quot;Verily, I wish the best for the fair lady. One can only hope that there may be stars in their sky. It may be puzzling the purpose of my tale, but I find it encouraging on the contrary. That even in ones most dire moments, they may find peace and pleasure. &#39;Tis merely a matter of whom you turn to in those dark hours. I hope that in some manner, I may play the role of The Red Mist for ye.&quot;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1207903049876512859 class=chatlog__message-container data-message-id=1207903049876512859><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/guilds/1093324008059052187/users/368895150342012930/avatars/8c2a31716944cdbc24aaeaeaba5de84c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(82,129,217) title=vogelnotes data-user-id=368895150342012930>shit gets real</span> <span class=chatlog__timestamp title="Thursday, February 15, 2024 11:15 PM"><a href=#chatlog__message-container-1207903049876512859>2/15/2024 11:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>As Don Quixote hugged again, Iris gave a quiet &quot;hup!&quot; in surprise, giving a small chuckle afterward. She seemed to sink into the grasp, physcially letting go and relaxing.
+
+&quot;You...&quot;
+
+<em>Be...The Red Mist? I would laugh this off, but...</em>
+
+Iris nodded. 
+
+&quot;Sure, in many ways, you too have inspired me. One would expect someone of my -- er, <em>former</em> standing -- would instead inspire others, but... there&#39;s something to learn from everyone.&quot; 
+
+She shook her head with a slight shiver. Her halo buzzed momentarily -- a few swords returned to hanging above their heads, suspended from an endless white ceiling.
+
+&quot;Thanks, Don Quixote.&quot;</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 53 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
